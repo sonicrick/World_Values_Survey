@@ -44,18 +44,38 @@ load.WVS.long.happy <- function() {
   map <- which(names(WVL) %in% varnames)
   Bin <- WVL[, map] # master
 
-  #change to factor those which are factors
-  is.cat <- sapply()
-  Bin$S003 <- factor(Bin$S003)
-  
+  # get field possible value and fields to ignore
+  fieldsRange <- read.csv(file.path(datapath, "WVS_L_filtered_valuerange.csv"),
+                          stringsAsFactors = FALSE)
 
+  # drop fields to ignore
+  Bin <- Bin[, !(names(Bin) %in% fieldsRange$VARIABLE[fieldsRange$IGNORE=="Y"])]
+  fieldsRange <- fieldsRange[fieldsRange$IGNORE!="Y", ]  #shorten list of names after eliminating IGNORED
+
+  #special treatment for Y003 which has NAs: categorise to -5 (i.e. unknown) before converting to factor
+  Bin$Y003[is.na(Bin$Y003)] <- -5
+
+  #change to factor those which are factors
+  is.cat <- sapply(fieldsRange$VALUE_RANGE, is.categorical, USE.NAMES=FALSE)
+  idx <- which(names(Bin) %in% fieldsRange$VARIABLE[is.cat])
+  for (i in idx) Bin[, i] <- as.factor(Bin[, i])
+  
   # set readable level for key fields
   levels(Bin$S003) <- c("Finland", "Singapore")
   levels(Bin$A008) <- c("No answer", "Don't know", "Very happy", "Quite happy", "Not very happy", "Not at all happy")
 
   # filter out those without data on Happiness
   Bin <- Bin[!(Bin$A008 %in% c("No answer", "Don't know")), ]  # eliminate those with unknown/missing answer etc on happiness
+
+  # check how many different values are in the field
+  # dropping fields which only have one value (useless for prediction and throws error)
+  responses <- apply(Bin, 2, function(x) length(table(x)))
+  Bin <- Bin[ , -which(responses==1)]
   
+  # rename for convenience
+  names(Bin)[names(Bin)=="A008"] <- "Happiness"
+  names(Bin)[names(Bin)=="S003"] <- "Country"
+
   return(Bin)
 }
 
