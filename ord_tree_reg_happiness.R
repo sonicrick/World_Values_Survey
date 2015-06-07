@@ -5,7 +5,8 @@
 source('~/GitHub/World_Values_Survey/WVS_lib.R')
 
 require(caret)
-require(rcart)
+require(rpart)
+require(CHAID)
 
 # load longitudinal data
 d <- load.WVS.long.happy()
@@ -33,7 +34,19 @@ fitControl <- trainControl(## 10-fold CV
   number = 10,
   ## repeated ten times
   repeats = 10)
-hapFit <- train(Happiness ~ ., data = dtrain,
-                method = "rcart",
+fitRpart <- train(Happiness ~ ., data = dtrain,
+                method = "rpart",
                 trControl = fitControl
                 )
+fitCHAID <- train(Happiness ~ ., data = dtrain,
+                     method = "chaid",
+                     trControl = fitControl
+)
+
+testRpart <- predict(fitRpart, newdata=dtest)
+
+testCHAID <- predict(fitCHAID, newdata=dtest)
+
+fc <- trainControl(method="cv", number=10)
+
+rpm <- rpart(Happiness ~ ., data = dtrain, control=rpart.control(minsplit=10))
