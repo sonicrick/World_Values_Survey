@@ -17,10 +17,10 @@ dtrain <- d[trainIndex, ]
 dtest <- d[-trainIndex, ]
 
 # train!
-fitControl <- trainControl(## 10-fold CV
+fitControl <- trainControl(## 5-fold CV
   method = "repeatedcv",
   number = 5,
-  ## repeated ten times
+  ## repeated five times
   repeats = 5)
 fitRpart <- train(Happiness ~ ., data = dtrain,
                 method = "rpart",
