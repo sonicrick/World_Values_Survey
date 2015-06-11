@@ -9,7 +9,7 @@ datapath <- "~/GitHub/World_Values_Survey/data"
 # identify option numbers in the value range of a field
 ################
 extract.field.numbers <- function(valuerange) {
-  numsvr <- unlist(strsplit(valuerange, "[\\:\n]"))
+  numsvr <- unlist(strsplit(valuerange, "[\\#\\:\n]"))
   nonnum <- which(is.na(as.numeric(numsvr)))  # stripaway non number
   return(as.numeric(numsvr[-nonnum]))
 }
@@ -33,10 +33,13 @@ is.categorical <- function(valuerange) {
 # load longitudinal data for WVS filtered for Finland and Singapore
 # set up for Happiness as dependent variable
 ################
-load.WVS.long.happy <- function() {
-  load(file.path(datapath, "WV_long.RData"))
-  fields <- read.csv(file.path(datapath, "filtered WVS_Values Surveys Integrated Dictionary_TimeSeries_v_2014-04-25.csv"),
+load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar) {
+  load(file.path(datapath, sourcefile))
+  fields <- read.csv(file.path(datapath, codebook),
                      stringsAsFactors=FALSE)
+  
+  #assign dataframe to be evaluated, which may differ in different sourcefile
+  WVL <- get(mainvar)
   
   # eliminate blank fields
   varnames <- fields$VARIABLE
@@ -45,7 +48,7 @@ load.WVS.long.happy <- function() {
   Bin <- WVL[, map] # master
 
   # get field possible value and fields to ignore
-  fieldsRange <- read.csv(file.path(datapath, "WVS_L_filtered_valuerange.csv"),
+  fieldsRange <- read.csv(file.path(datapath, fieldinfo),
                           stringsAsFactors = FALSE)
 
   # drop fields to ignore
@@ -55,7 +58,7 @@ load.WVS.long.happy <- function() {
   #special treatment for Y003 which has NAs: categorise to -5 (i.e. unknown) before converting to factor
   Bin$Y003[is.na(Bin$Y003)] <- -5
 
-  #change to factor those which are factors
+  #change to factor those which are factorsWV6_Codebook_v_2014_11_07WV6_Codebook_v_2014_11_07
   is.cat <- sapply(fieldsRange$VALUE_RANGE, is.categorical, USE.NAMES=FALSE)
   idx <- which(names(Bin) %in% fieldsRange$VARIABLE[is.cat])
   for (i in idx) Bin[, i] <- as.factor(Bin[, i])
@@ -79,3 +82,13 @@ load.WVS.long.happy <- function() {
   return(Bin)
 }
 
+############
+# convenience function to load longitudinal happiness data
+###########
+
+load.WVS.long.happy <- function() {
+  load.WVS(sourcefile="WV_long.RData",
+           codebook="filtered WVS_Values Surveys Integrated Dictionary_TimeSeries_v_2014-04-25.csv",
+           fieldinfo="WVS_L_filtered_valuerange.csv",
+           mainvar="WVL")
+}
