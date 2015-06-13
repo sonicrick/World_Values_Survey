@@ -80,7 +80,7 @@ resamps <- resamples(list(rpart1 = fitRpart1,
 
 #save to avoid retraining
 save(fitRpart1, fitRpart2, fitRpart5, resamps,
-     file=file.path(datapath, "rpart_train.sav") )
+     file=file.path(datapath, "rpart_train.Rdata") )
 
 #rp2 <- rpart(Happiness ~ ., data = dtrain, control=rpart.control(minsplit=2))
 

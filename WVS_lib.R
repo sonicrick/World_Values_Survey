@@ -81,6 +81,8 @@ load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar) {
   
   # filter out those without data on Happiness
   Bin <- Bin[!(Bin$A008 %in% c("No answer", "Don't know")), ]  # eliminate those with unknown/missing answer etc on happiness
+  #refactor to eliminate non-existent label
+  Bin$A008 <- factor(Bin$A008)
   
   # check how many different values are in the field
   # dropping fields which only have one value (useless for prediction and throws error)
