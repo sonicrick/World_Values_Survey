@@ -6,7 +6,14 @@ source('~/GitHub/World_Values_Survey/WVS_lib.R')
 
 require(caret)
 require(rpart)
-require(MASS)
+require(rattle)
+require(rpart.plot)
+
+##############
+# enable parallel processing
+##############
+require(doSNOW)
+cl <- registerDoSNOW(makeCluster(4, type = "SOCK"))
 
 ##############
 # prepare data if not yet
@@ -22,41 +29,62 @@ dtrain <- d[trainIndex, ]
 dtest <- d[-trainIndex, ]
 
 # separate Fin and Sin training set
-separate.country <- function(wvsdata, country) {
-  sepdata <- wvsdata[wvsdata$Country==country, ]
-  country.fields <- c("Country", "S003A", "S024", "S025")
-  sepdata <- sepdata[, !(names(sepdata) %in% country.fields)]
-  return(sepdata)
-}
-
 trainFin <- separate.country(dtrain, "Finland")
 trainSin <- separate.country(dtrain, "Singapore")
 testFin <- separate.country(dtest, "Finland")
 testSin <- separate.country(dtest, "Singapore")
 
-rpFin <- rpart(Happiness ~ ., data = trainFin) #, control=rpart.control(minsplit=2))
-rpSin <- rpart(Happiness ~ ., data = trainSin) #, control=rpart.control(minsplit=2))
-rpFin2 <- rpart(Happiness ~ ., data = trainFin, control=rpart.control(minsplit=2, minbucket=1))
-rpSin2 <- rpart(Happiness ~ ., data = trainSin, control=rpart.control(minsplit=2, minbucket=1))
-rpFin3 <- rpart(Happiness ~ ., data = trainFin, control=rpart.control(minsplit=2, minbucket=1, cp=.005))
+# rpFin <- rpart(Happiness ~ ., data = trainFin) #, control=rpart.control(minsplit=2))
+# rpSin <- rpart(Happiness ~ ., data = trainSin) #, control=rpart.control(minsplit=2))
+# rpFin2 <- rpart(Happiness ~ ., data = trainFin, control=rpart.control(minsplit=2, minbucket=1))
+# rpSin2 <- rpart(Happiness ~ ., data = trainSin, control=rpart.control(minsplit=2, minbucket=1))
+# rpFin3 <- rpart(Happiness ~ ., data = trainFin, control=rpart.control(minsplit=2, minbucket=1, cp=.005))
 
 
-# train setting
-fitControl <- trainControl(## 5-fold CV
-  method = "repeatedcv",
-  number = 5,
-  ## repeated five times
-  repeats = 5)
+# train setting: set in WVS_lib.R
 
 #train model
-fitRpartFin <- train(Happiness ~ ., data = trainFin,
-                   method = "rpart",
+set.seed(12345) # need to set same seed for all training to have same fold separation
+rpartFin <- train(Happiness ~ ., data = trainFin,
+                  method = "rpart",
+                  trControl = fitControl
+)
+accFin <- sum(testFin$Happiness == predict(rpartFin, newdata=testFin)) / nrow(testFin)
+
+set.seed(12345) # need to set same seed for all training to have same fold separation
+rpartSin <- train(Happiness ~ ., data = trainSin,
+                  method = "rpart",
+                  trControl = fitControl
+)
+accSin <- sum(testSin$Happiness == predict(rpartSin, newdata=testSin)) / nrow(testSin)
+
+set.seed(12345) # need to set same seed for all training to have same fold separation
+rpart2Fin <- train(Happiness ~ ., data = trainFin,
+                   method = "rpart2",
                    trControl = fitControl
 )
-accFin <- sum(testFin$Happiness == predict(fitRpartFin, newdata=testFin)) / nrow(testFin)
+accFin2 <- sum(testFin$Happiness == predict(rpart2Fin, newdata=testFin)) / nrow(testFin)
 
-fitRpartSin <- train(Happiness ~ ., data = trainSin,
-                     method = "rpart",
-                     trControl = fitControl
+set.seed(12345) # need to set same seed for all training to have same fold separation
+rpart2Sin <- train(Happiness ~ ., data = trainSin,
+                   method = "rpart2",
+                   trControl = fitControl
 )
-accSin <- sum(testSin$Happiness == predict(fitRpartSin, newdata=testSin)) / nrow(testSin)
+accSin2 <- sum(testSin$Happiness == predict(rpart2Sin, newdata=testSin)) / nrow(testSin)
+
+resamps <- resamples(list(rpartFin=rpartFin,
+                          rpartSin=rpartSin,
+                          rpart2Fin=rpart2Fin,
+                          rpart2Sin=rpart2Sin))
+
+# based on resamps result, rpartFin2 and rpartSin2 are better
+save(resamps, rpart2Fin, rpart2Sin, file=file.path(datapath, "FinvsSin.Rdata"))
+
+prp(rpart2Fin$finalModel)
+
+rp2 <- rpart(Happiness ~ ., data = trainSin, control=rpart.control(cp=.0125, maxdepth=6))
+
+#######################
+# stop parallel processing
+#######################
+stopCluster(cl)

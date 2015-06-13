@@ -1,0 +1,171 @@
+INDEX,VARIABLE,LABEL,World Values Survey wave 1 (1981-1984),World Values Survey wave 2 (1990-1994),World Values Survey Wave 3 (1995-1998),World Values Survey wave 4 (1999-2004),World Values Survey wave 5 (2005-2008),World Values Survey wave 6 (2010-2012)
+001_008,A008,"Feeling of happiness 
+",v10 Feeling of happiness,v18 Feeling of happiness,V10 Feeling of happiness,v11 State of mind,V10 Feeling of happiness,V10 Feeling of happiness
+001_009,A009,"State of health (subjective) 
+",v11 State of health (subjective),v83 State of health (subjective),V11 State of health,v12 State of health,V11 State of health (subjective),V11 State of health (subjective)
+001_029,A029,"Important child qualities: independence 
+",v15 Important child qualities: independence,v227 Important child qualities: independence,V15 Children qualities: Independence,v15 Child qual: Independence,V12 Child qualities: independence,V12 Important child qualities: independence
+001_030,A030,"Important child qualities: hard work 
+",v16 Important child qualities: hard work,v228 Important child qualities: hard work,V16 Children qualities: Hard work,v16 Child qual: Hard work,V13 Child qualities: hard work,V13 Important child qualities: Hard work
+001_032,A032,"Important child qualities: feeling of responsibility 
+",v17 Important child qualities: feeling of responsibility,v229 Important child qualities: feeling of responsibility,V17 Children qualities: Responsibility,v17 Child qual: Feeling of responsibility,V14 Child qualities: feeling of responsibility,V14 Important child qualities: Feeling of responsibility
+001_034,A034,"Important child qualities: imagination 
+",v18 Important child qualities: imagination,v230 Important child qualities: imagination,V18 Children qualities: Imagination,v18 Child qual: Imagination,V15 Child qualities: imagination,V15 Important child qualities: Imagination
+001_035,A035,"Important child qualities: tolerance and respect for other people 
+",v19 Important child qualities: tolerance and respect for other people,v231 Important child qualities: tolerance and respect for other people,V19 Children qualities: Tolerance and respect for other people,v19 Child qual: Tolerance and respect for other people,V16 Child qualities: tolerance and respect for other people,V16 Important child qualities: Tolerance and respect for other people
+001_038,A038,"Important child qualities: thrift saving money and things 
+",v20 Important child qualities: thrift saving money and things,v232 Important child qualities: thrift saving money and things,"V20 Children qualities: Thrift, saving money and things",v20 Child qual: Thrift saving money and things,V17 Child qualities: thrift saving money and things,V17 Important child qualities: Thrift saving money and things
+001_039,A039,"Important child qualities: determination perseverance 
+",v21 Important child qualities: determination perseverance,v233 Important child qualities: determination perseverance,"V21 Children qualities: Determination, perseverance",v21 Child qual: Determination perseverance,V18 Child qualities: determination perseverance,"V18 Important child qualities: Determination, perseverance"
+001_040,A040,"Important child qualities: religious faith 
+",v22 Important child qualities: religious faith,v234 Important child qualities: religious faith,V22 Children qualities: Religious faith,v22 Child qual: Religious faith,V19 Child qualities: religious faith,V19 Important child qualities: Religious faith
+001_041,A041,"Important child qualities: unselfishness 
+",v23 Important child qualities: unselfishness,v235 Important child qualities: unselfishness,V23 Children qualities: Unselfishness,v23 Child qual: Unselfishness,V20 Child qualities: unselfishness,V20 Important child qualities: Unselfishness
+001_042,A042,"Important child qualities: obedience 
+",v24 Important child qualities: obedience,v236 Important child qualities: obedience,V24 Children qualities: Obedience,v24 Child qual: Obedience,V21 Child qualities: obedience,V21 Important child qualities: Obedience
+001_131_002,A124_02,"Neighbours: People of a different race 
+",v52 Neighbours: People of a different race,v70 Neighbours: People of a different race,V52 Neighbors: People of different race,v69 Neighbors: People of a different race,V35 Neighbours: People of a different race,V37 Would not like to have as neighbors: People of a different race
+001_131_003,A124_03,"Neighbours: Heavy drinkers 
+",v54 Neighbours: Heavy drinkers,v72 Neighbours: Heavy drinkers,V54 Neighbors: Heavy drinkers,v70 Neighbors: Heavy drinkers,V40 Neighbours: Heavy drinkers,V42 Would not like to have as neighbors: Heavy drinkers
+001_131_006,A124_06,"Neighbours: Immigrants/foreign workers 
+",v57 Neighbours: Immigrants/foreign workers,v77 Neighbours: Immigrants/foreign workers,V57 Neighbors: Immigrants/Foreign workers,v73 Neighbors: Immigrants/Foreign workers,V37 Neighbours: Immigrants/foreign workers,V39 Would not like to have as neighbors: Immigrants/foreign workers
+001_132,A165,"Most people can be trusted 
+",v27 Most people can be trusted,v94 Most people can be trusted,V27 Trust in people,v25 Dealing with people,V23 Most people can be trusted,V24 Most people can be trusted
+001_138,A170,"Satisfaction with your life 
+",v65 Satisfaction with your life,v96 Satisfaction with your life,V65 Life satisfaction,v81 How satisfied are you with your life,V22 How satisfied are you with your life,V23 Satisfaction with your life
+001_141,A173,"How much freedom of choice and control 
+",v66 How much freedom of choice and control,v95 How much freedom of choice and control,v66 Freedom of choice about control over life,v82 How much freedom you feel,V46 How much freedom you feel,V55 How much freedom of choice and control over own life
+003_006,C006,"Satisfaction with financial situation of household 
+",v64 Satisfaction with financial situation of household,v132 Satisfaction with financial situation of household,V64 Financial satisfaction,v80 Satisfied or dissatisfied with the financial situation of your household,V68 Satisfaction with the financial situation of household,V59 Satisfaction with financial situation of household
+005_003,E003,"Aims of respondent: first choice 
+",v106 Aims of respondent: first choice,v259 Aims of respondent: first choice,v106 Aims of respondent: first choice,v122 Aims of respondent: First choice,V71 Aims of respondent: first choice,V62 Aims of respondent: first choice
+005_004,E004,"Aims of respondent: second choice 
+",v107 Aims of respondent: second choice,v260 Aims of respondent: second choice,v107 Aims of respondent: second choice,v123 Aims of respondent: Second choice,V72 Aims of respondent: second choice,V63 Aims of respondent: second choice
+005_012,E012,"Willingness to fight for country 
+",v110 Willingness to fight for country,v263 Willingness to fight for country,v110 Willing to fight in war,v126 Be willing to fight for your country,V75 Be willing to fight in war for your country,V66 Willingness to fight for your country
+005_015,E015,"Future changes: Less importance placed on work 
+",v112 Future changes: Less importance placed on work,v265 Future changes: Less importance placed on work,V112 Future: Less importance placed on work in our lives,v128 Less importance placed on work,V76 Less importance placed on work,V67 Future changes: Less importance placed on work in our lives
+005_016,E016,"Future changes: More emphasis on technology 
+",v113 Future changes: More emphasis on technology,v266 Future changes: More emphasis on technology,V113 Future: More emphasis on the development of technology,v129 More emphasis on technology,V77 More emphasis on technology,V68 Future changes: More emphasis on the development of  technology
+005_018,E018,"Future changes: Greater respect for authority 
+",v114 Future changes: Greater respect for authority,v268 Future changes: Greater respect for authority,V114 Future: Greater respect for authority,v130 Greater respect for authority,V78 Greater respect for authority,V69 Future changes: Greater respect for authority
+005_023,E023,"Interest in politics 
+",v117 Interest in politics,v241 Interest in politics,V117 How interested would you say you are in politics,v133 Interested in politics,V95 Interested in politics,V84 Interest in politics
+005_025,E025,"Political action: signing a petition 
+",v118 Political action: signing a petition,v242 Political action: signing a petition,V118 Political Particicpation: Signing a petition,v134 Signing a petition,V96 Political action: signing a petition,V85 Political action: Signing a petition
+005_027,E026,"Political action: joining in boycotts 
+",v119 Political action: joining in boycotts,v243 Political action: joining in boycotts,V119 Political Participation: Joining in boycotts,v135 Joining in boycotts,V97 Political action: joining in boycotts,V86 Political action: Joining in boycotts
+005_029,E027,"Political action: attending lawful/peaceful demonstrations 
+",v120 Political action: attending lawful/peaceful demonstrations,v244 Political action: attending lawful/peaceful demonstrations,V120 Political Participation: Attending lawful demonstrations,v136 Attending lawful demonstrations,V98 Political action: Attending peaceful demonstrations,V87 Political action: Attending peaceful demonstrations
+005_036,E033,"Self positioning in political scale 
+",v123 Self positioning in political scale,v248 Self positioning in political scale,V123 Left-Right self placement,v139 Political scale,V114 Self positioning in political scale,V95 Self positioning in political scale
+005_072_001,E069_01,"Confidence: Churches 
+",v135 Confidence: Churches,v272 Confidence: Churches,V135 Confidence:The churches,v147 Confidence: churches,V131 Confidence: Churches,V108 Confidence: The Churches
+005_072_002,E069_02,"Confidence: Armed Forces 
+",v136 Confidence: Armed Forces,v273 Confidence: Armed Forces,V136 Confidence: The armed forces,v148 Confidence: armed forces,V132 Confidence: Armed Forces,V109 Confidence: The armed forces
+005_072_004,E069_04,"Confidence: The Press 
+",v138 Confidence: The Press,v276 Confidence: The Press,V138 Confidence: The press,v149 Confidence: The press,V133 Confidence: The Press,V110 Confidence: The press
+005_072_005,E069_05,"Confidence: Labour Unions 
+",v140 Confidence: Labour Unions,v277 Confidence: Labour Unions,V140 Confidence: Labor Unions,v151 Confidence: Labor unions,V135 Confidence: Labour Unions,V112 Confidence: Labour Unions
+005_072_006,E069_06,"Confidence: The Police 
+",v141 Confidence: The Police,v278 Confidence: The Police,V141 Confidence: The police,v152 Confidence: The police,V136 Confidence: The Police,V113 Confidence: The police
+005_072_007,E069_07,"Confidence: Parliament 
+",v144 Confidence: Parliament,v279 Confidence: Parliament,V144 Confidence: Parliament,v155 Confidence: Parliament,V140 Confidence: Parliament,V117 Confidence: Parliament
+005_072_008,E069_08,"Confidence: The Civil Services 
+",v145 Confidence: The Civil Services,v280 Confidence: The Civil Services,V145 Confidence: The civil service,v156 Confidence: The Civil service,V141 Confidence: The Civil Services,V118 Confidence: The Civil service
+005_072_013,E069_13,"Confidence: Major Companies 
+",v146 Confidence: Major Companies,v281 Confidence: Major Companies,V146 Confidence: Major Companies,v157 Confidence: Major companies,V142 Confidence: Major Companies,V120 Confidence: Major Companies
+006_001,F001,"Thinking about meaning and purpose of life 
+",v177 Thinking about meaning and purpose of life,v133 Thinking about meaning and purpose of life,V177 How often do you think about the meaning and purpose of life,v182 Thinking about meaning and purpose of life,V184 Thinking about meaning and purpose of life,V143 Thinking about meaning and purpose of life
+006_024,F025,"Religious denomination 
+",v179 Religious denomination,v144 Religious denomination,V179 Religious Denomination,v184 Religious denomination,V185 Religious denomination,V144 Religious denomination
+006_027,F028,"How often do you attend religious services 
+",v181 How often do you attend religious services,v147 How often do you attend religious services,v181 Attendance of services,v185 How often do you attend religious services,V186 How often do you attend religious services,V145 How often do you attend religious services
+006_034,F034,"Religious person 
+",v182 Religious person,v151 Religious person,V182 Are you religious,v186 Religious person,V187 Religious person,V147 Religious person
+006_063,F063,"How important is God in your life 
+",v190 How important is God in your life,v176 How important is God in your life,V190 Importance of God in your life,v196 How important is God in your life,V192 How important is god in your life,V152 How important is God in your life
+006_114,F114,"Justifiable: claiming government benefits 
+",v192 Justifiable: claiming government benefits,v296 Justifiable: claiming government benefits,V192 Justifiable: Claiming government benefits to which you are not entitled,v204 Justifiable: Claiming government benefits,V198 Justifiable: claiming government benefits,V198 Justifiable: Claiming government benefits to which you are not entitled
+006_118,F115,"Justifiable: avoiding a fare on public transport 
+",v193 Justifiable: avoiding a fare on public transport,v297 Justifiable: avoiding a fare on public transport,V193 Justifiable: Avoiding a fare on public transport,v205 Justifiable: Avoiding a fare on public transport,V199 Justifiable: avoiding a fare on public transport,V199 Justifiable: Avoiding a fare on public transport
+006_119,F116,"Justifiable: cheating on taxes 
+",v194 Justifiable: cheating on taxes,v298 Justifiable: cheating on taxes,V194 Justifiable: Cheating on taxes if you have a chance,v206 Justifiable: Cheating on taxes,V200 Justifiable: cheating on taxes,V201 Justifiable: Cheating on taxes if you have a chance
+006_120,F117,"Justifiable: someone accepting a bribe 
+",v196 Justifiable: someone accepting a bribe,v306 Justifiable: someone accepting a bribe,V196 Justifiable: Someone accepting a bribe in the course of their duties,v207 Justifiable: Someone accepting a bribe,V201 Justifiable: someone accepting a bribe,V202 Justifiable: Someone accepting a bribe in the course of their duties
+006_121,F118,"Justifiable: homosexuality 
+",v197 Justifiable: homosexuality,v307 Justifiable: homosexuality,V197 Justifiable: Homosexuality,v208 Justifiable: Homosexuality,V202 Justifiable: homosexuality,V203 Justifiable: Homosexuality
+006_122,F119,"Justifiable: prostitution 
+",v198 Justifiable: prostitution,v308 Justifiable: prostitution,V198 Justifiable: Prostitution,v209 Justifiable: Prostitution,V203 Justifiable: prostitution,V203A Justifiable: Prostitution
+006_123,F120,"Justifiable: abortion 
+",v199 Justifiable: abortion,v309 Justifiable: abortion,V199 Justifiable: Abortion,v210 Justifiable: Abortion,V204 Justifiable: abortion,V204 Justifiable: Abortion
+006_124,F121,"Justifiable: divorce 
+",v200 Justifiable: divorce,v310 Justifiable: divorce,V200 Justifiable: Divorce,v211 Justifiable: Divorce,V205 Justifiable: divorce,V205 Justifiable: Divorce
+006_125,F122,"Justifiable: euthanasia 
+",v201 Justifiable: euthanasia,v312 Justifiable: euthanasia,V201 Justifiable: Euthanasia-ending the life of the incurably sick,v212 Justifiable: Euthanasia,V206 Justifiable: euthanasia,V207A Justifiable: Euthanasia
+006_126,F123,"Justifiable: suicide 
+",v202 Justifiable: suicide,v313 Justifiable: suicide,V202 Justifiable: Suicide,v213 Justifiable: Suicide,V207 Justifiable: suicide,V207 Justifiable: Suicide
+007_009,G006,"How proud of nationality 
+",v205 How proud of nationality,v322 How proud of nationality,V205 How proud are you to be [nationality],v216 How proud of nationality,V209 How proud of nationality,V211 How proud of nationality
+010_002,S002,"Wave 
+",V1 Wave,V1 WVS wave,V1 Wave,v1 Wave,V1 wave number,V1 Wave
+010_004,S003,"Country/region 
+",V2 Country/region,v2 Country/region,V2 Country,v2 Country/Region,V2 Country/Region,V2 Country Code
+010_005,S003A,"Country/regions [with split ups] 
+",V2A Country/region [with split ups], ,V2A Country/region [with split ups],V2A Country/regions [with split ups],V2A Country/regions [with split ups],V2A Country/regions [with split ups]
+010_007,S006,"Original respondent number 
+",v3 Original respondent number,v3 Original respondent number,v3 Interview number,v3 Interview number,V3 Original respondent number,V3 Interview number
+010_008,S007,"Unified respondent number 
+",S007 Unified respondent number,S007 Unified respondent number,S007 Unified respondent number,S007 Unified respondent number,S007 Unified respondent number,S007 Unified respondent number
+010_008_001,s007_01,"Unified respondent number (EVS/WVS LF) 
+",S007_01 Unified respondent number (EVS/WVS LF),S007_01 Unified respondent number,S007_01 Unified respondent number,S007_01 Unified respondent number,S007_01 Unified respondent number,S007_01 UNified respondent number
+010_017,S017,"Weight 
+",V236 Weight,V376 Weight,V236 Original weight,v245 WEIGHT,V259 Weight,V258 Weight
+010_018,S017A,"Weight [with split ups] 
+",V236A Country weight Splitted,V376A Weight with split ups,V236A Weight [with split ups],V245A Weight with split ups,V259A Weight [with split ups],V258A Weight with split ups
+010_019,S018,"Equilibrated weight-1000 
+",S018 Equilibrated weight-1000,S018 Equilibrated weight-1000,S018 1000 equilibrated weight,S018 1000 equilibrated weight,S018 1000 equilibrated weight,S018 1000 equilibrated weight
+010_020,S018A,"Equilibrated weight-1000 [with split ups] 
+",S018A Equilibrated weight-1000,S018A Equilibrated weight 1000-with split ups,S018A 1000 equilibrated weight with split ups,S018A 1000 equilibrated weight with split ups,S018AMV 1000-equilibrated weight with split ups,S018A 1000 equilibrated weight with split ups
+010_021,S019,"Equilibrated weight-1500 
+",S019 Equilibrated weight-1500,S019 1500 equilibrated weight,S019 1500 equilibrated weight,S019 1500 equilibrated weight,S019 1500 equilibrated weight,S019 1500 equilibrated weight
+010_022,S019A,"Equilibrated weight-1500 [with split ups] 
+",S019A Equilibrated weight-1500,S019A 1500 equilibrated weight with split ups,S019A 1500 equilibrated weight with split ups,S019A 1500 equilibrated weight with split ups,S019A 1500 equilibraed weight with split ups,S019A 1500 equilibrated Weight with split ups
+010_023,S020,"Year survey 
+",V237 Year survey,v377 Year survey,V238 Year of survey,V246 Survey year,V260 Year survey,V262 Survey year
+010_028,S024,"Country - wave 
+",V238 Nation-Wave,v378 Nation-Wave,V239 Nation-Wave,V247 Nation-Wave,V266 Nation-Wave,V263 Nation-Wave
+010_030,S025,"Country - year 
+",V239 Nation Year,v379 Nation Year,V240 Nation Year,V248 Nation Year,V267 Nation Year,V264 Nation Year
+014_001,X001,"Sex 
+",v214 Sex,v353 Sex,V214 Sex,v223 Sex,V235 Sex,V240 Sex
+014_002,X002,"Year of birth 
+",v215 Year of birth,v354 Year of birth,V215 Year of birth,v224 Year of birth,V236 Year of birth,V241 Year of birth
+014_003,X003,"Age 
+",v216 Age,v355 Age,V216 Age,v225 Age,V237 Age,V242 Age
+014_009,X007,"Marital status 
+",v89 Marital status,v181 Marital status,V89 Marital status,v106 Marital status,V55 Marital status,V57 Marital status
+014_013,X011,"How many children do you have 
+",v90 How many children do you have,v211 How many children do you have,V90 How many children,v107 Have you had any children,V56 How many children,V58 How many children do you have
+014_026,X023,"What age did you complete your education 
+",v218 What age did you complete your education, ,V218 What age did you complete your education,v227 What age did you complete your education,V239 What age did you complete your education,V249 What age did you complete your education
+014_037,X026,"Do you live with your parents 
+",v219 Do you live with your parents,v357 Do you live with your parents,V219 Do you live with your parents,v228 Do you live whit your parents,V240 Do you live with your parents,V250 Do you live with your parents
+014_039,X028,"Employment status 
+",v220 Employment status,v358 Employment status,V220 Employment status,v229 Are you employed now,V241 Employment status,V229 Employment status
+014_052,X036,"Profession/job 
+",v221 Profession/job,v359 Profession/job,V221 Occupation/job,v230 Profession,V242 Profession/job,V265 Respondent's occupation
+014_060,X040,"Are you the chief wage earner in your house 
+",v222 Are you the chief wage earner in your house,v360 Are you the chief wage earner in your house,V222 Are you the chief wage earner in your house,v231 Are you the chief wage earner in your house,V248 Are you the chief wage earner in your house,V235 Are you the chief wage earner in your house
+014_065,X045,"Social class (subjective) 
+",v226 Social class (subjective), ,V226 Subjective social class position,v235 Social class (subjective),V252 Social class (subjective),V238 Social class (subjective)
+014_068,X047,"Scale of incomes 
+",v227 Scale of incomes,v363 Scale of incomes,V227 Subjective scale of income,v236 Scale of incomes,V253 Scale of incomes,V239 Scale of incomes
+014_075,X048,"Region where the interview was conducted 
+",v234 Region where the interview was conducted,v370 Region where the interview was conducted,V234 Region,V243 Region where the interview was conducted (*),V257 Region where the interview was conducted,V256 Region where the interview was conducted
+014_086,X051,"Ethnic group 
+",V233 Ethnic group,v369 Ethnic group,V233 Ethnic group,V242 Ethnic group (*),V256 Ethnic group,V254 Ethnic group
+015_002,Y002,"Post-Materialist index 4-item 
+",Y002 Post-materialist index (4-item),Y002 Post-materialist index (4-item),Y002 Post-materialist index (4-item),Y002 Post-materialist index (4-item),Y002 Post-materialist index (4-item),Y002 Post-materialist index (4-item)
+015_003,Y003,"Autonomy Index 
+",Y003 Autonomy Index,Y003 Autonomy Index,Y003 Autonomy Index,Y003 Autonomy Index,Y003 Autonomy Index,Y003 Autonomy Index

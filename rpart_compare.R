@@ -22,19 +22,15 @@ dtrain <- d[trainIndex, ]
 dtest <- d[-trainIndex, ]
 
 # train setting
-fitControl <- trainControl(## 5-fold CV
-  method = "repeatedcv",
-  number = 5,
-  ## repeated five times
-  repeats = 5)
+# train setting: set in WVS_lib.R
 
 # train 1: basic rpart 1
 cat("Rpart 1")
 set.seed(12345) # need to set same seed for all training to have same fold separation?
 fitRpart1 <- train(Happiness ~ ., data = dtrain,
-                  method = "rpart",
-                  trControl = fitControl
-                  )
+                   method = "rpart",
+                   trControl = fitControl
+)
 
 #train 2: ordinal logistic regression
 # NOT WORKING YET

@@ -1,0 +1,2177 @@
+INDEX,VARIABLE,LABEL,IGNORE,VALUE_RANGE
+001_008,A008,"Feeling of happiness ",,"1:Very happy
+2:Quite happy
+3:Not very happy
+4:Not at all happy
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_009,A009,"State of health (subjective) 
+",,"1:Very good
+2:Good
+3:Fair
+4:Poor
+5:Very poor
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_029,A029,"Important child qualities: independence 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_030,A030,"Important child qualities: hard work 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_032,A032,"Important child qualities: feeling of responsibility 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_034,A034,"Important child qualities: imagination 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_035,A035,"Important child qualities: tolerance and respect for other people 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_038,A038,"Important child qualities: thrift saving money and things 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_039,A039,"Important child qualities: determination perseverance 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_040,A040,"Important child qualities: religious faith 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_041,A041,"Important child qualities: unselfishness 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_042,A042,"Important child qualities: obedience 
+",,"0:Not mentioned
+1:Important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_131_002,A124_02,"Neighbours: People of a different race 
+",,"0:Not mentioned
+1:Mentioned
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_131_003,A124_03,"Neighbours: Heavy drinkers 
+",,"0:Not mentioned
+1:Mentioned
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_131_006,A124_06,"Neighbours: Immigrants/foreign workers 
+",,"0:Not mentioned
+1:Mentioned
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_132,A165,"Most people can be trusted 
+",,"1:Most people can be trusted
+2:Can´t be too careful
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_138,A170,"Satisfaction with your life 
+",,"1:Dissatisfied
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Satisfied
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+001_141,A173,"How much freedom of choice and control 
+",,"1:None at all
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:A great deal
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+003_006,C006,"Satisfaction with financial situation of household 
+",,"1:Dissatisfied
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Satisfied
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_003,E003,"Aims of respondent: first choice 
+",,"1:Maintaining order in the nation
+2:Give people more say
+3:Fighting rising prices
+4:Protecting freedom of speech
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_004,E004,"Aims of respondent: second choice 
+",,"1:Maintaining order in the nation
+2:Give people more say
+3:Fighting rising prices
+4:Protecting freedom of speech
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_012,E012,"Willingness to fight for country 
+",,"0:No
+1:Yes
+2:Depends
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_015,E015,"Future changes: Less importance placed on work 
+",,"1:Good thing
+2:Don´t mind
+3:Bad thing
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_016,E016,"Future changes: More emphasis on technology 
+",,"1:Good thing
+2:Don´t mind
+3:Bad thing
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_018,E018,"Future changes: Greater respect for authority 
+",,"1:Good thing
+2:Don´t mind
+3:Bad thing
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_023,E023,"Interest in politics 
+",,"1:Very interested
+2:Somewhat interested
+3:Not very interested
+4:Not at all interested
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_025,E025,"Political action: signing a petition 
+",,"1:Have done
+2:Might do
+3:Would never do
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_027,E026,"Political action: joining in boycotts 
+",,"1:Have done
+2:Might do
+3:Would never do
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_029,E027,"Political action: attending lawful/peaceful demonstrations 
+",,"1:Have done
+2:Might do
+3:Would never do
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_036,E033,"Self positioning in political scale 
+",,"1:Left
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Right
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_001,E069_01,"Confidence: Churches 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_002,E069_02,"Confidence: Armed Forces 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_004,E069_04,"Confidence: The Press 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_005,E069_05,"Confidence: Labour Unions 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_006,E069_06,"Confidence: The Police 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_007,E069_07,"Confidence: Parliament 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_008,E069_08,"Confidence: The Civil Services 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+005_072_013,E069_13,"Confidence: Major Companies 
+",,"1:A great deal
+2:Quite a lot
+3:Not very much
+4:None at all
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_001,F001,"Thinking about meaning and purpose of life 
+",,"1:Often
+2:Sometimes
+3:Rarely
+4:Never
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_024,F025,"Religious denomination 
+",,"0:No religious denomination
+1:Aglipayan
+2:Al-Hadis
+3:Alliance
+4:Ancestral worshipping
+5:Anglican
+6:Armenian Apostolic Church
+7:Assembly of God
+8:Bahai
+9:Baptist
+10:Born again
+11:Brgy. Sang Birhen
+12:Buddhist
+13:C & S Celestial
+14:Cao dai
+15:Catholic: doesn´t follow rules
+16:Charismatic
+17:Christian
+18:Christian Fellowship
+19:Christian Reform
+20:Church of Christ / Church of Christ / Church of Christ of Latter-day Saints
+21:Confucianism
+22:Druse
+23:El Shaddai
+24:Essid
+25:Evangelical
+26:Faith in god
+27:Filipinista
+28:Free church/Non denominational church
+29:Greek Catholic
+30:Gregorian
+31:Hindu
+32:Hoa hao
+33:Hussite
+34:Iglesia ni Cristo (INC)
+35:Independent African Church (e.g. ZCC, Shembe, etc.)
+36:Independent Church
+37:Israelita Nuevo Pacto Universal (FREPAP)
+38:Jain
+39:Jehovah witnesses
+40:Jesus is Lord (JIL)
+41:Jesus Miracle Crusade
+42:Jew
+43:Ka-a Elica
+44:Lutheran
+45:Mennonite
+46:Methodists
+47:Mita
+48:Mormon
+49:Muslim
+50:Native
+51:New Testament Christ/Biblist
+52:Orthodox
+53:Other
+54:Other: Brasil: Espirit,candomblé,umbanda,esoterism,occultism
+55:Other: Christian com
+56:Other: Oriental
+57:Other: Philippines (less 0.5%)
+58:Other: Taiwan (taoism, protestant fundam., ancient cults)
+59:Paganism
+60:Pentecostal
+61:Presbyterian
+62:Protestant
+63:Qadiani
+64:Roman Catholic
+65:Rosacruz
+66:Salvation Army
+67:Self Lealisation Fellowship
+68:Seven Day Adventist
+69:Shenism (Chinese Religion)
+70:Shia
+71:Sikh
+72:Sisewiss
+73:Spiritista
+74:Spiritualists
+75:Sunni
+76:Tac
+77:Taoist
+78:The Church of Sweden
+79:The Worldwide Church of God
+80:Theosofists
+81:Unitarian
+82:United
+83:United Church of Christ in the Philippines (UCCP)
+84:Wicca
+85:Zionist
+86:Zoroastrian
+87:Ratana
+88:Ringatu
+89:New Apostolic Church
+90:Yiguan Dao
+91:Daolism
+12001:DZ: Christian (Quakers, Jehovah's Witnesses, Evangelical, Protestant)
+360001:AU: Uniting Church
+528001:Dutch Reformed (Nederlands Hervormd)
+528002:Reformed Churches in the Netherlands (Gereformeerd)
+710001:ZA: Evangelical/Apostolic Faith Mission
+710002:ZA: African Traditional Religion
+-5:Missing
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_027,F028,"How often do you attend religious services 
+",,"1:More than once a week
+2:Once a week
+3:Once a month
+4:Only on special holy days/Christmas/Easter days
+5:Other specific holy days
+6:Once a year
+7:Less often
+8:Never practically never
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_034,F034,"Religious person 
+",,"1:A religious person
+2:Not a religious person
+3:A convinced atheist
+4:Other answer
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_063,F063,"How important is God in your life 
+",,"1:Not at all important
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Very important
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_114,F114,"Justifiable: claiming government benefits 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_118,F115,"Justifiable: avoiding a fare on public transport 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_119,F116,"Justifiable: cheating on taxes 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_120,F117,"Justifiable: someone accepting a bribe 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_121,F118,"Justifiable: homosexuality 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_122,F119,"Justifiable: prostitution 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_123,F120,"Justifiable: abortion 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_124,F121,"Justifiable: divorce 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_125,F122,"Justifiable: euthanasia 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+006_126,F123,"Justifiable: suicide 
+",,"1:Never justifiable
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:Always justifiable
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+007_009,G006,"How proud of nationality 
+",,"1:Very proud
+2:Quite proud
+3:Not very proud
+4:Not at all proud
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable; Foreigner; Has not [country] nationality
+-2:No answer
+-1:Don´t know
+"
+010_002,S002,"Wave 
+",,"1:1981-1984
+2:1989-1993
+3:1994-1998
+4:1999-2004
+5:2005-2009
+6:2010-2014
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+010_004,S003,"Country/region 
+",,"4:Afghanistan
+8:Albania
+12:Algeria
+16:American Samoa
+20:Andorra
+24:Angola
+28:Antigua
+31:Azerbaijan
+32:Argentina
+36:Australia
+40:Austria
+48:Bahrain
+50:Bangladesh
+51:Armenia
+52:Barbados
+56:Belgium
+60:Bermuda
+64:Bhutan
+68:Bolivia
+70:Bosnia
+72:Botswana
+76:Brazil
+84:Belize
+100:Bulgaria
+101:SrpSka Republic
+104:Myanmar
+108:Burundi
+112:Belarus
+116:Cambodia
+120:Cameroon
+124:Canada
+132:Cape Verde
+144:Sri Lanka
+148:Chad
+152:Chile
+156:China
+158:Taiwan
+170:Colombia
+180:D.R. Congo
+184:Cook Islands
+188:Costa Rica
+191:Croatia
+192:Cuba
+196:Cyprus
+197:Cyprus (T)
+203:Czech Rep.
+204:Benin
+208:Denmark
+214:Dominican Rep.
+218:Ecuador
+222:El Salvador
+226:Eq.Guinea
+231:Ethiopia
+232:Eritrea
+233:Estonia
+246:Finland
+250:France
+268:Georgia
+270:Gambia
+275:Palestine
+276:Germany
+288:Ghana
+292:Gibraltar
+300:Greece
+320:Guatemala
+324:Guinea
+328:Guyana
+332:Haiti
+340:Honduras
+344:Hong Kong
+348:Hungary
+352:Iceland
+356:India
+360:Indonesia
+364:Iran
+368:Iraq
+372:Ireland
+376:Israel
+380:Italy
+384:Côte d'Ivoire
+388:Jamaica
+392:Japan
+398:Kazakhstan
+400:Jordan
+404:Kenya
+408:North Korea
+410:South Korea
+414:Kuwait
+417:Kyrgyzstan
+418:Laos
+422:Lebanon
+426:Lesotho
+428:Latvia
+430:Liberia
+434:Libya
+438:Liechtenstein
+440:Lithuania
+442:Luxembourg
+450:Madagascar
+454:Malawi
+458:Malaysia
+466:Mali
+470:Malta
+474:Martinique
+478:Mauritania
+480:Mauritius
+484:Mexico
+492:Monaco
+496:Mongolia
+498:Moldova
+504:Morocco
+508:Mozambique
+512:Oman
+516:Namibia
+524:Nepal
+528:Netherlands
+554:New Zealand
+558:Nicaragua
+562:Niger
+566:Nigeria
+578:Norway
+586:Pakistan
+591:Panama
+598:Papua New Guinea
+600:Paraguay
+604:Peru
+608:Philippines
+616:Poland
+620:Portugal
+624:Guinea-Bissau
+626:Timor-Leste
+630:Puerto Rico
+634:Qatar
+642:Romania
+643:Russia
+646:Rwanda
+682:Saudi Arabia
+686:Senegal
+690:Seychelles
+694:Sierra Leone
+702:Singapore
+703:Slovakia
+704:Viet Nam
+705:Slovenia
+706:Somalia
+710:South Africa
+716:Zimbabwe
+724:Spain
+736:Sudan
+740:Suriname
+752:Sweden
+756:Switzerland
+760:Syria
+762:Tajikistan
+764:Thailand
+768:Togo
+780:Trinidad and Tobago
+784:United Arab Emirates
+788:Tunisia
+792:Turkey
+795:Turkmenistan
+800:Uganda
+804:Ukraine
+807:Macedonia
+818:Egypt
+826:Great Britain
+834:Tanzania
+840:United States
+850:U.S. Virgin Islands
+854:Burkina Faso
+858:Uruguay
+860:Uzbekistan
+862:Venezuela
+887:Yemen
+891:Serbia and Montenegro
+894:Zambia
+900:West Germany
+901:East Germany
+902:Tambov
+903:Moscow
+904:Basque Country
+906:Andalusia
+907:Galicia
+909:North Ireland
+910:Valencia
+911:Serbia
+912:Montenegro
+913:Serbian Bosnia
+914:Bosnia
+915:Kosovo
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+010_005,S003A,"Country/regions [with split ups] 
+",,"-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+4:Afghanistan
+8:Albania
+12:Algeria
+16:American Samoa
+20:Andorra
+24:Angola
+28:Antigua
+31:Azerbaijan
+32:Argentina
+36:Australia
+40:Austria
+48:Bahrain
+50:Bangladesh
+51:Armenia
+52:Barbados
+56:Belgium
+60:Bermuda
+64:Bhutan
+68:Bolivia
+70:Bosnia
+72:Botswana
+76:Brazil
+84:Belize
+100:Bulgaria
+101:SrpSka Republic
+104:Myanmar
+108:Burundi
+112:Belarus
+116:Cambodia
+120:Cameroon
+124:Canada
+132:Cape Verde
+144:Sri Lanka
+148:Chad
+152:Chile
+156:China
+158:Taiwan
+170:Colombia
+180:D.R. Congo
+184:Cook Islands
+188:Costa Rica
+191:Croatia
+192:Cuba
+196:Cyprus
+197:Cyprus (T)
+203:Czech Rep.
+204:Benin
+208:Denmark
+214:Dominican Rep.
+218:Ecuador
+222:El Salvador
+226:Eq.Guinea
+231:Ethiopia
+232:Eritrea
+233:Estonia
+246:Finland
+250:France
+268:Georgia
+270:Gambia
+275:Palestine
+276:Germany
+288:Ghana
+292:Gibraltar
+300:Greece
+320:Guatemala
+324:Guinea
+328:Guyana
+332:Haiti
+340:Honduras
+344:Hong Kong
+348:Hungary
+352:Iceland
+356:India
+360:Indonesia
+364:Iran
+368:Iraq
+372:Ireland
+376:Israel
+380:Italy
+384:Côte d'Ivoire
+388:Jamaica
+392:Japan
+398:Kazakhstan
+400:Jordan
+404:Kenya
+408:North Korea
+410:South Korea
+414:Kuwait
+417:Kyrgyzstan
+418:Laos
+422:Lebanon
+426:Lesotho
+428:Latvia
+430:Liberia
+434:Libya
+438:Liechtenstein
+440:Lithuania
+442:Luxembourg
+450:Madagascar
+454:Malawi
+458:Malaysia
+466:Mali
+470:Malta
+474:Martinique
+478:Mauritania
+480:Mauritius
+484:Mexico
+492:Monaco
+496:Mongolia
+498:Moldova
+504:Morocco
+508:Mozambique
+512:Oman
+516:Namibia
+524:Nepal
+528:Netherlands
+554:New Zealand
+558:Nicaragua
+562:Niger
+566:Nigeria
+578:Norway
+586:Pakistan
+591:Panama
+598:Papua New Guinea
+600:Paraguay
+604:Peru
+608:Philippines
+616:Poland
+620:Portugal
+624:Guinea-Bissau
+626:Timor-Leste
+630:Puerto Rico
+634:Qatar
+642:Romania
+643:Russia
+646:Rwanda
+682:Saudi Arabia
+686:Senegal
+690:Seychelles
+694:Sierra Leone
+702:Singapore
+703:Slovakia
+704:Viet Nam
+705:Slovenia
+706:Somalia
+710:South Africa
+716:Zimbabwe
+724:Spain
+736:Sudan
+740:Suriname
+752:Sweden
+756:Switzerland
+760:Syria
+762:Tajikistan
+764:Thailand
+768:Togo
+780:Trinidad and Tobago
+784:United Arab Emirates
+788:Tunisia
+792:Turkey
+795:Turkmenistan
+800:Uganda
+804:Ukraine
+807:Macedonia
+818:Egypt
+826:Great Britain
+834:Tanzania
+840:United States
+850:U.S. Virgin Islands
+854:Burkina Faso
+858:Uruguay
+860:Uzbekistan
+862:Venezuela
+887:Yemen
+891:Serbia and Montenegro
+894:Zambia
+900:West Germany
+901:East Germany
+902:Tambov
+903:Moscow
+904:Basque Country
+906:Andalusia
+907:Galicia
+909:North Ireland
+910:Valencia
+911:Serbia
+912:Montenegro
+913:Serbian Bosnia
+914:Bosnia
+915:Kosovo
+"
+010_007,S006,"Original respondent number 
+",Y,"-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+010_008,S007,"Unified respondent number 
+",Y,"-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+010_008_001,s007_01,"Unified respondent number (EVS/WVS LF) 
+",Y,"-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+010_017,S017,"Weight 
+",Y,"1:No weighting
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+010_018,S017A,"Weight [with split ups] 
+",Y,"-5.000000:Missing; Unknown
+-4.000000:Not asked in survey
+-3.000000:Not applicable
+-2.000000:No answer
+-1.000000:Don´t know
+1.000000:No weighting
+0.01#100#Weighted
+"
+010_019,S018,"Equilibrated weight-1000 
+",Y,"-5.000000:Missing; Unknown
+-4.000000:Not asked in survey
+-3.000000:Not applicable
+-2.000000:No answer
+-1.000000:Don't know
+"
+010_020,S018A,"Equilibrated weight-1000 [with split ups] 
+",Y,"-5.000000:Missing; Unknown
+-4.000000:Not asked in survey
+-3.000000:Not applicable
+-2.000000:No answer
+-1.000000:Don't know
+"
+010_021,S019,"Equilibrated weight-1500 
+",Y,"-5.000000:Missing; Unknown
+-4.000000:Not asked in survey
+-3.000000:Not applicable
+-2.000000:No answer
+-1.000000:Don't know
+"
+010_022,S019A,"Equilibrated weight-1500 [with split ups] 
+",Y,"-5.000000:Missing; Unknown
+-4.000000:Not asked in survey
+-3.000000:Not applicable
+-2.000000:No answer
+-1.000000:Don't know
+"
+010_023,S020,"Year survey 
+",,"1981:1981
+1982:1982
+1983:1983
+1984:1984
+1989:1989
+1990:1990
+1991:1991
+1992:1992
+1993:1993
+1994:1994
+1995:1995
+1996:1996
+1997:1997
+1998:1998
+1999:1999
+2000:2000
+2001:2001
+2002:2002
+2003:2003
+2004:2004
+2005:2005
+2006:2006
+2007:2007
+2008:2008
+2009:2009
+2010:2010
+2011:2011
+2012:2012
+2013:2013
+2014:2014
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+010_028,S024,"Country - wave 
+",,"83:Albania (3)
+84:Albania (4)
+124:Algeria (4)
+126:Algeria (6)
+205:Andorra (5)
+313:Azerbaijan (3)
+314:Azerbaijan (4)
+316:Azerbaijan (6)
+321:Argentina (1)
+322:Argentina (2)
+323:Argentina (3)
+324:Argentina (4)
+325:Argentina (5)
+326:Argentina (6)
+361:Australia (1)
+363:Australia (3)
+365:Australia (5)
+366:Australia (6)
+402:Austria (2)
+403:Austria (3)
+404:Austria (4)
+486:Bahrain (6)
+503:Bangladesh (3)
+504:Bangladesh (4)
+513:Armenia (3)
+514:Armenia (4)
+516:Armenia (6)
+561:Belgium (1)
+562:Belgium (2)
+563:Belgium (3)
+564:Belgium (4)
+703:Bosnia and Herzegovina (3)
+704:Bosnia and Herzegovina (4)
+762:Brazil (2)
+763:Brazil (3)
+765:Brazil (5)
+1002:Bulgaria (2)
+1003:Bulgaria (3)
+1004:Bulgaria (4)
+1005:Bulgaria (5)
+1013:SrpSka republic (3)
+1122:Belarus (2)
+1123:Belarus (3)
+1124:Belarus (4)
+1126:Belarus (6)
+1241:Canada (1)
+1242:Canada (2)
+1244:Canada (4)
+1245:Canada (5)
+1522:Chile (2)
+1523:Chile (3)
+1524:Chile (4)
+1525:Chile (5)
+1526:Chile (6)
+1562:China (2)
+1563:China (3)
+1564:China (4)
+1565:China (5)
+1566:China (6)
+1583:Taiwan (3)
+1585:Taiwan (5)
+1586:Taiwan (6)
+1703:Colombia (3)
+1705:Colombia (5)
+1706:Colombia (6)
+1913:Croatia (3)
+1914:Croatia (4)
+1964:Cyprus (4)
+1965:Cyprus (5)
+1966:Cyprus (6)
+1974:Northern Cyprus (4)
+2032:Czech Republic (2)
+2033:Czech Republic (3)
+2034:Czech Republic (4)
+2081:Denmark (1)
+2082:Denmark (2)
+2083:Denmark (3)
+2084:Denmark (4)
+2143:Dominican Republic (3)
+2186:Ecuador (6)
+2223:El Salvador (3)
+2315:Ethiopia (5)
+2332:Estonia (2)
+2333:Estonia (3)
+2334:Estonia (4)
+2336:Estonia (6)
+2461:Finland (1)
+2462:Finland (2)
+2463:Finland (3)
+2464:Finland (4)
+2465:Finland (5)
+2501:France (1)
+2502:France (2)
+2503:France (3)
+2504:France (4)
+2505:France (5)
+2683:Georgia (3)
+2684:Georgia (4)
+2685:Georgia (5)
+2756:Palestine (6)
+2761:Germany West (1)
+2762:Germany (2)
+2763:Germany (3)
+2764:Germany (4)
+2765:Germany (5)
+2766:Germany (6)
+2885:Ghana (5)
+2886:Ghana (6)
+3003:Greece (3)
+3004:Greece (4)
+3205:Guatemala (5)
+3445:Hong Kong (5)
+3481:Hungary (1)
+3482:Hungary (2)
+3483:Hungary (3)
+3484:Hungary (4)
+3485:Hungary (5)
+3521:Iceland (1)
+3522:Iceland (2)
+3523:Iceland (3)
+3524:Iceland (4)
+3562:India (2)
+3563:India (3)
+3564:India (4)
+3565:India (5)
+3566:India (6)
+3604:Indonesia (4)
+3605:Indonesia (5)
+3644:Iran (4)
+3645:Iran (5)
+3684:Iraq (4)
+3685:Iraq (5)
+3686:Iraq (6)
+3721:Ireland (1)
+3722:Ireland (2)
+3723:Ireland (3)
+3724:Ireland (4)
+3764:Israel (4)
+3801:Italy (1)
+3802:Italy (2)
+3803:Italy (3)
+3804:Italy (4)
+3805:Italy (5)
+3921:Japan (1)
+3922:Japan (2)
+3923:Japan (3)
+3924:Japan (4)
+3925:Japan (5)
+3926:Japan (6)
+3986:Kazakhstan (6)
+4004:Jordan (4)
+4005:Jordan (5)
+4006:Jordan (6)
+4101:South Korea (1)
+4102:South Korea (2)
+4103:South Korea (3)
+4104:South Korea (4)
+4105:South Korea (5)
+4106:South Korea (6)
+4146:Kuwait (6)
+4174:Kyrgyzstan (4)
+4176:Kyrgyzstan (6)
+4226:Lebanon (6)
+4282:Latvia (2)
+4283:Latvia (3)
+4284:Latvia (4)
+4346:Libya (6)
+4402:Lithuania (2)
+4403:Lithuania (3)
+4404:Lithuania (4)
+4423:Luxembourg (3)
+4424:Luxembourg (4)
+4585:Malaysia (5)
+4586:Malaysia (6)
+4665:Mali (5)
+4701:Malta (1)
+4702:Malta (2)
+4703:Malta (3)
+4704:Malta (4)
+4841:Mexico (1)
+4842:Mexico (2)
+4843:Mexico (3)
+4844:Mexico (4)
+4845:Mexico (5)
+4846:Mexico (6)
+4983:Moldova (3)
+4984:Moldova (4)
+4985:Moldova (5)
+4994:Montenegro (4)
+5044:Morocco (4)
+5045:Morocco (5)
+5046:Morocco (6)
+5281:Netherlands (1)
+5282:Netherlands (2)
+5283:Netherlands (3)
+5284:Netherlands (4)
+5285:Netherlands (5)
+5286:Netherlands (6)
+5543:New Zealand (3)
+5545:New Zealand (5)
+5546:New Zealand (6)
+5662:Nigeria (2)
+5663:Nigeria (3)
+5664:Nigeria (4)
+5666:Nigeria (6)
+5781:Norway (1)
+5782:Norway (2)
+5783:Norway (3)
+5784:Norway (4)
+5785:Norway (5)
+5863:Pakistan (3)
+5864:Pakistan (4)
+5866:Pakistan (5)
+6043:Peru (3)
+6044:Peru (4)
+6045:Peru (5)
+6046:Peru (6)
+6083:Philippines (3)
+6084:Philippines (4)
+6086:Philippines (6)
+6162:Poland (2)
+6163:Poland (3)
+6164:Poland (4)
+6165:Poland (5)
+6166:Poland (6)
+6202:Portugal (2)
+6203:Portugal (3)
+6204:Portugal (4)
+6303:Puerto Rico (3)
+6304:Puerto Rico (4)
+6346:Qatar (6)
+6422:Romania (2)
+6423:Romania (3)
+6424:Romania (4)
+6425:Romania (5)
+6426:Romania (6)
+6432:Russian Federation (2)
+6433:Russian Federation (3)
+6434:Russian Federation (4)
+6435:Russian Federation (5)
+6436:Russian Federation (6)
+6465:Rwanda (5)
+6466:Rwanda (6)
+6824:Saudi Arabia (4)
+6884:Serbia (4)
+7024:Singapore (4)
+7026:Singapore 6)
+7032:Slovakia (2)
+7033:Slovakia (3)
+7034:Slovakia (4)
+7044:Viet Nam (4)
+7045:Viet Nam (5)
+7052:Slovenia (2)
+7053:Slovenia (3)
+7054:Slovenia (4)
+7055:Slovenia (5)
+7056:Slovenia (6)
+7101:South Africa (1)
+7102:South Africa (2)
+7103:South Africa (3)
+7104:South Africa (4)
+7105:South Africa (5)
+7106:South Africa (6)
+7164:Zimbabwe (4)
+7166:Zimbabwe (6)
+7241:Spain (1)
+7242:Spain (2)
+7243:Spain (3)
+7244:Spain (4)
+7245:Spain (5)
+7246:Spain (6)
+7521:Sweden (1)
+7522:Sweden (2)
+7523:Sweden (3)
+7524:Sweden (4)
+7525:Sweden (5)
+7526:Sweden (6)
+7562:Switzerland (2)
+7563:Switzerland (3)
+7564:Switzerland (4)
+7565:Switzerland (5)
+7645:Thailand (5)
+7646:Thailand (6)
+7805:Trinidad and Tobago (5)
+7806:Trinidad and Tobago (6)
+7886:Tunisia (6)
+7922:Turkey (2)
+7923:Turkey (3)
+7924:Turkey (4)
+7925:Turkey (5)
+7926:Turkey (6)
+8004:Uganda (4)
+8043:Ukraine (3)
+8044:Ukraine (4)
+8045:Ukraine (5)
+8046:Ukraine (6)
+8073:Macedonia (3)
+8074:Macedonia (4)
+8184:Egypt (4)
+8185:Egypt (5)
+8186:Egypt (6)
+8261:Great Britain (1)
+8262:Great Britain (2)
+8263:Great Britain (3)
+8264:Great Britain (4)
+8265:Great Britain (5)
+8344:Tanzania (4)
+8401:United States (1)
+8402:United States (2)
+8403:United States (3)
+8404:United States (4)
+8405:United States (5)
+8406:United States (6)
+8545:Burkina Faso (5)
+8583:Uruguay (3)
+8585:Uruguay (5)
+8586:Uruguay (6)
+8606:Uzbekistan (6)
+8623:Venezuela (3)
+8624:Venezuela (4)
+8876:Yemen (6)
+8913:Serbia and Montenegro (3)
+8914:Serbia and Montenegro (4)
+8915:Serbia and Montenegro (5)
+8945:Zambia (5)
+9001:Germany West (1)
+9002:Germany West (2)
+9003:Germany West (3)
+9004:Germany West (4)
+9005:Germany West (5)
+9012:Germany East (2)
+9013:Germany East (3)
+9014:Germany East (4)
+9015:Germany East (5)
+9021:Tambov (1)
+9023:Tambov (3)
+9043:Basque Country (3)
+9063:Andalusia (3)
+9073:Galicia (3)
+9091:Northern Ireland (1)
+9092:Northern Ireland (2)
+9093:Northern Ireland (3)
+9094:Northern Ireland (4)
+9103:Valencia (3)
+9113:Serbia (3)
+9114:Serbia (4)
+9115:Serbia (5)
+9123:Montenegro (3)
+9124:Montenegro (4)
+9133:SrpSka - Serbian Republic of Bosnia (3)
+9134:SrpSka - Serbian Republic of Bosnia (4)
+9143:Bosnia Federation (3)
+9144:Bosnia Federation (4)
+9154:Kosovo (4)
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+010_030,S025,"Country - year 
+",,"482014:Bahrain (2014)
+81998:Albania (1998)
+82002:Albania (2002)
+82008:Albania (2008)
+122002:Algeria (2002)
+122013:Algeria (2013)
+202005:Andorra (2005)
+311997:Azerbaijan (1997)
+312008:Azerbaijan (2008)
+312011:Azerbaijan (2011)
+321984:Argentina (1984)
+321991:Argentina (1991)
+321995:Argentina (1995)
+321999:Argentina (1999)
+322006:Argentina (2006)
+322013:Argentina (2013)
+361981:Australia (1981)
+361995:Australia (1995)
+362005:Australia (2005)
+362012:Australia (2012)
+401990:Austria (1990)
+401999:Austria (1999)
+402008:Austria (2008)
+501996:Bangladesh (1996)
+502002:Bangladesh (2002)
+511997:Armenia (1997)
+512008:Armenia (2008)
+512011:Armenia (2011)
+561981:Belgium (1981)
+561990:Belgium (1990)
+561999:Belgium (1999)
+562009:Belgium (2009)
+701998:Bosnia and Herzegovina (1998)
+702001:Bosnia and Herzegovina (2001)
+702008:Bosnia Herzegovina (2008)
+761991:Brazil (1991)
+761997:Brazil (1997)
+762006:Brazil (2006)
+1001991:Bulgaria (1991)
+1001997:Bulgaria (1997)
+1001999:Bulgaria (1999)
+1002006:Bulgaria (2006)
+1002008:Bulgaria (2008)
+1002005:Bulgaria (2005)
+1011998:Srp Ska (1998)
+1121990:Belarus (1990)
+1121996:Belarus (1996)
+1122000:Belarus (2000)
+1122008:Belarus (2008)
+1122011:Belarus (2011)
+1241982:Canada (1982)
+1241990:Canada (1990)
+1242000:Canada (2000)
+1242006:Canada (2006)
+1521990:Chile (1990)
+1521996:Chile (1996)
+1522000:Chile (2000)
+1522006:Chile (2006)
+1522011:Chile (2011)
+1561990:China (1990)
+1561995:China (1995)
+1562001:China (2001)
+1562007:China (2007)
+1562012:China (2012)
+1581994:Taiwan (1994)
+1582006:Taiwan (2006)
+1582012:Taiwan (2012)
+1701997:Colombia (1997)
+1701998:Colombia (1998)
+1702005:Colombia (2005)
+1702012:Colombia (2012)
+1911996:Croatia (1996)
+1911999:Croatia (1999)
+1912008:Croatia (2008)
+1962006:Cyprus (2006)
+1962008:Cyprus (2008)
+1962011:Cyprus (2011)
+1972008:Northern Cyprus (2008)
+2031990:Czech Republic (1990)
+2031991:Czech Republic (1991)
+2031998:Czech Republic (1998)
+2031999:Czech Republic (1999)
+2032008:Czech Republic (2008)
+2081981:Denmark (1981)
+2081990:Denmark (1990)
+2081999:Denmark (1999)
+2082008:Denmark (2008)
+2141996:Dominican Republic (1996)
+2182011:Ecuador (2011)
+2182013:Ecuador (2013)
+2221999:El Salvador (1999)
+2312007:Ethiopia (2007)
+2331990:Estonia (1990)
+2331996:Estonia (1996)
+2331999:Estonia (1999)
+2332008:Estonia (2008)
+2332011:Estonia (2011)
+2461981:Finland (1981)
+2461990:Finland (1990)
+2461996:Finland (1996)
+2462000:Finland (2000)
+2462005:Finland (2005)
+2462009:Finland (2009)
+2501981:France (1981)
+2501990:France (1990)
+2501999:France (1999)
+2502006:France (2006)
+2502008:France (2008)
+2681996:Georgia (1996)
+2682008:Georgia (2008)
+2682009:Georgia (2009)
+2752013:Palestine (2013)
+2761981:Germany West (1981)
+2761990:Germany (1990)
+2761997:Germany (1997)
+2761999:Germany (1999)
+2762006:Germany (2006)
+2762008:Germany (2008)
+2762013:Germany (2013)
+2882007:Ghana (2007)
+2882012:Ghana (2012)
+3001999:Greece (1999)
+3002008:Greece (2008)
+3202004:Guatemala (2004)
+3442005:Hong Kong (2005)
+3481982:Hungary (1982)
+3481991:Hungary (1991)
+3481998:Hungary (1998)
+3481999:Hungary (1999)
+3482009:Hungary (2009)
+3521984:Iceland (1984)
+3521990:Iceland (1990)
+3521999:Iceland (1999)
+3522009:Iceland (2009)
+3561990:India (1990)
+3561995:India (1995)
+3562001:India (2001)
+3562006:India (2006)
+3562012:India (2012)
+3562014:India (2014)
+3602001:Indonesia (2001)
+3602006:Indonesia (2006)
+3642000:Iran (2000)
+3642007:Iran (2007)
+3682004:Iraq (2004)
+3682006:Iraq (2006)
+3682012:Iraq (2012)
+3721981:Ireland (1981)
+3721990:Ireland (1990)
+3721999:Ireland (1999)
+3722008:Ireland (2008)
+3762001:Israel (2001)
+3801981:Italy (1981)
+3801990:Italy (1990)
+3801999:Italy (1999)
+3802005:Italy (2005)
+3802009:Italy (2009)
+3921981:Japan (1981)
+3921990:Japan (1990)
+3921995:Japan (1995)
+3922000:Japan (2000)
+3922005:Japan (2005)
+3922010:Japan (2010)
+3982011:Kazakhstan (2011)
+4002001:Jordan (2001)
+4002007:Jordan (2007)
+4002014:Jordan (2014)
+4101982:South Korea (1982)
+4101990:South Korea (1990)
+4101996:South Korea (1996)
+4102001:South Korea (2001)
+4102005:South Korea (2005)
+4102010:South Korea (2010)
+4142014:Kuwait (2014)
+4172003:Kyrgyzstan (2003)
+4172011:Kyrgyzstan (2011)
+4222013:Lebanon (2013)
+4281990:Latvia (1990)
+4281996:Latvia (1996)
+4281999:Latvia (1999)
+4282008:Latvia (2008)
+4342014:Libya (2014)
+4401990:Lithuania (1990)
+4401997:Lithuania (1997)
+4401999:Lithuania (1999)
+4402008:Lithuania (2008)
+4421999:Luxembourg (1999)
+4422008:Luxembourg (2008)
+4582006:Malaysia (2006)
+4582012:Malaysia (2012)
+4662007:Mali (2007)
+4701983:Malta (1983)
+4701991:Malta (1991)
+4701999:Malta (1999)
+4702008:Malta (2008)
+4841981:Mexico (1981)
+4841990:Mexico (1990)
+4841995:Mexico (1995)
+4841996:Mexico (1996)
+4842000:Mexico (2000)
+4842005:Mexico (2005)
+4842012:Mexico (2012)
+4981995:Moldova (1995)
+4981996:Moldova (1996)
+4982002:Moldova (2002)
+4982006:Moldova (2006)
+4982008:Moldova (2008)
+4992008:Montenegro (2008)
+5042001:Morocco (2001)
+5042007:Morocco (2007)
+5042011:Morocco (2011)
+5281981:Netherlands (1981)
+5281990:Netherlands (1990)
+5281999:Netherlands (1999)
+5282006:Netherlands (2006)
+5282008:Netherlands (2008)
+5282012:Netherlands (2012)
+5541998:New Zealand (1998)
+5542004:New Zealand (2004)
+5542011:New Zealand (2011)
+5661990:Nigeria (1990)
+5661995:Nigeria (1995)
+5662000:Nigeria (2000)
+5662011:Nigeria (2011)
+5781982:Norway (1982)
+5781990:Norway (1990)
+5781996:Norway (1996)
+5782007:Norway (2007)
+5782008:Norway (2008)
+5861997:Pakistan (1997)
+5862001:Pakistan (2001)
+5862012:Pakistan (2012)
+6041996:Peru (1996)
+6042001:Peru (2001)
+6042006:Peru (2006)
+6042012:Peru (2012)
+6081996:Philippines (1996)
+6082001:Philippines (2001)
+6082012:Philippines (2012)
+6161989:Poland (1989)
+6161990:Poland (1990)
+6161997:Poland (1997)
+6161999:Poland (1999)
+6162005:Poland (2005)
+6162008:Poland (2008)
+6162012:Poland (2012)
+6201990:Portugal (1990)
+6201999:Portugal (1999)
+6202008:Portugal (2008)
+6301995:Puerto Rico (1995)
+6302001:Puerto Rico (2001)
+6342010:Qatar (2010)
+6421993:Romania (1993)
+6421998:Romania (1998)
+6421999:Romania (1999)
+6422005:Romania (2005)
+6422008:Romania (2008)
+6422012:Romania (2012)
+6431990:Russian Federation (1990)
+6431995:Russian Federation (1995)
+6431999:Russian Federation (1999)
+6432006:Russian Federation (2006)
+6432008:Russian Federation (2008)
+6432011:Russian Federaton (2011)
+6462007:Rwanda (2007)
+6462012:Rwanda (2012)
+6822003:Saudi Arabia (2003)
+6882008:Serbia (2008)
+7022002:Singapore (2002)
+7022012:Singapore (2012)
+7031990:Slovakia (1990)
+7031991:Slovakia (1991)
+7031998:Slovakia (1998)
+7031999:Slovakia (1999)
+7032008:Slovak Republic (2008)
+7042001:Viet Nam (2001)
+7042006:Viet Nam (2006)
+7051992:Slovenia (1992)
+7051995:Slovenia (1995)
+7051999:Slovenia (1999)
+7052005:Slovenia (2005)
+7052008:Slovenia (2008)
+7052011:Slovenia (2011)
+7101982:South Africa (1982)
+7101990:South Africa (1990)
+7101996:South Africa (1996)
+7102001:South Africa (2001)
+7102006:South Africa (2006)
+7102013:South Africa (2013)
+7162001:Zimbabwe (2001)
+7162012:Zimbabwe (2012)
+7241981:Spain (1981)
+7241990:Spain (1990)
+7241995:Spain (1995)
+7241999:Spain (1999)
+7242000:Spain (2000)
+7242007:Spain (2007)
+7242008:Spain (2008)
+7242011:Spain (2011)
+7521981:Sweden (1981)
+7521982:Sweden (1982)
+7521990:Sweden (1990)
+7521996:Sweden (1996)
+7521999:Sweden (1999)
+7522006:Sweden (2006)
+7522009:Sweden (2009)
+7522011:Sweden (2011)
+7561989:Switzerland (1989)
+7561996:Switzerland (1996)
+7562007:Switzerland (2007)
+7562008:Switzerland (2008)
+7642007:Thailand (2007)
+7642013:Thailand (2013)
+7802006:Trinidad and Tobago (2006)
+7802011:Trinidad and Tobago (2011)
+7882013:Tunisia (2013)
+7921990:Turkey (1990)
+7921996:Turkey (1996)
+7922001:Turkey (2001)
+7922007:Turkey (2007)
+7922009:Turkey (2009)
+7922011:Turkey (2011)
+8002001:Uganda (2001)
+8041996:Ukraine (1996)
+8041999:Ukraine (1999)
+8042006:Ukraine (2006)
+8042008:Ukraine (2008)
+8042011:Ukraine (2011)
+8071998:Macedonia (1998)
+8072001:Macedonia (2001)
+8072008:Macedonia (2008)
+8182000:Egypt (2000)
+8182001:Egypt (2001)
+8182008:Egypt (2008)
+8182013:Egypt (2013)
+8261981:Great Britain (1981)
+8261990:Great Britain (1990)
+8261995:Great Britain (1995)
+8261998:Great Britain (1998)
+8261999:Great Britain (1999)
+8262005:Great Britain (2005)
+8262009:Great Britain (2009)
+8342001:Tanzania (2001)
+8401981:United States (1981)
+8401982:United States (1982)
+8401990:United States (1990)
+8401995:United States (1995)
+8401999:United States (1999)
+8402006:United States (2006)
+8402011:United States (2011)
+8542007:Burkina Faso (2007)
+8581996:Uruguay (1996)
+8582006:Uruguay (2006)
+8582011:Uruguay (2011)
+8602011:Uzbekistan (2011)
+8621996:Venezuela (1996)
+8622000:Venezuela (2000)
+8872014:Yemen (2014)
+8911996:Serbia and Montenegro (1996)
+8912001:Serbia and Montenegro (2001)
+8912005:Serbia and Montenegro (2005)
+8942007:Zambia (2007)
+9091981:Northern Ireland (1981)
+9091990:Northern Ireland (1990)
+9091999:Northern Ireland (1999)
+9092008:Northern Ireland (2008)
+9111996:Serbia (1996)
+9112001:Serbia (2001)
+9112006:Serbia (2006)
+9121996:Montenegro (1996)
+9122001:Montenegro (2001)
+9152008:Kosovo (2008)
+9141998:Bosnia (1998)
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+014_001,X001,"Sex 
+",,"1:Male
+2:Female
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_002,X002,"Year of birth 
+",,"-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+014_003,X003,"Age 
+",,"10#29#up to 29
+30#49#30-49
+50#99#50 and more
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+014_009,X007,"Marital status 
+",,"1:Married
+2:Living together as married
+3:Divorced
+4:Separated
+5:Widowed
+6:Single/Never married
+7:Divorced, Separated or Widow
+8:Living apart but steady relation (married,cohabitation)
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_013,X011,"How many children do you have 
+",,"0:No child
+1:1 child
+2:2 children
+3:3 children
+4:4 children
+5:5 children
+6:6 children
+7:7 children
+8:8 or more children
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_026,X023,"What age did you complete your education 
+",,"0:No formal education
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don't know
+"
+014_037,X026,"Do you live with your parents 
+",,"0:No
+1:Yes
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_039,X028,"Employment status 
+",,"1:Full time
+2:Part time
+3:Self employed
+4:Retired
+5:Housewife
+6:Students
+7:Unemployed
+8:Other
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_052,X036,"Profession/job 
+",,"11:""Employer/manager of establishment with 500 or more employed""
+12:""Employer/manager of establishment with 100 or more employed""
+13:""Employer/manager of establishment with 10 or more employed""
+14:""Employer/manager of establishment w. less than 500 employed""
+15:""Employer/manager of establishment w. less than 100 employed""
+16:""Employer/manager of establishment with less than 10 employed""
+21:""Professional worker""
+22:""Middle level non-manual office worker""
+23:""Supervisory Non manual -office worker""
+24:""Junior level non manual""
+25:""Non manual -office worker""
+31:""Foreman and supervisor""
+32:""Skilled manual""
+33:""Semi-skilled manual worker""
+34:""Unskilled manual""
+41:""Farmer: has own farm""
+42:""Agricultural worker""
+51:""Member of armed forces""
+61:""Never had a job""
+81:""Other""
+-5:""Missing; Unkown""
+-4:""Not asked in survey""
+-3:""Not applicable""
+-2:""No answer""
+-1:""Don´t know""
+"
+014_060,X040,"Are you the chief wage earner in your house 
+",,"0:No
+1:Yes
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_065,X045,"Social class (subjective) 
+",,"1:Upper class
+2:Upper middle class
+3:Lower middle class
+4:Working class
+5:Lower class
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_068,X047,"Scale of incomes 
+",,"1:Lower step
+2:second step
+3:Third step
+4:Fourth step
+5:Fifth step
+6:Sixth step
+7:Seventh step
+8:Eigth step
+9:Nineth step
+10:Tenth step
+11:Highest step
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+014_075,X048,"Region where the interview was conducted 
+",,(*) See annexe
+014_086,X051,"Ethnic group 
+",,(*) See annexe
+015_002,Y002,"Post-Materialist index 4-item 
+",,"1:Materialist
+2:Mixed
+3:Postmaterialist
+-5:Missing; Unknown
+-4:Not asked in survey
+-3:Not applicable
+-2:No answer
+-1:Don´t know
+"
+015_003,Y003,"Autonomy Index 
+",,"-2:Obedience/Religious Faith
+-1:-1
+0:0
+1:1
+2:Determination, perseverance/Independence
+-5:Missing
+-3:Not applicable
+"
