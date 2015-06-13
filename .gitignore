@@ -1,7 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
-data
+orig_data
 Thumbs.db
 charts
 *.png

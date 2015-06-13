@@ -9,4 +9,32 @@ sourcefile <- "WV6.RData"
 codebook <- "WV6_Codebook_v_2014_11_07.csv"
 fieldinfo <- "WVS_6_valuerange.csv"
 mainvar <- "WV6"
-wvs6df <- load.WVS.long.happy(sourcefile, codebook, fieldinfo, mainvar)
+d <- load.WVS(sourcefile, codebook, fieldinfo, mainvar)
+
+# split training and test set
+set.seed(13579)
+trainIndex <- createDataPartition(d$Happiness, p=.8, list=FALSE)
+dtrain <- d[trainIndex, ]
+dtest <- d[-trainIndex, ]
+
+# train setting: set in WVS_lib.R
+
+# train 1: basic rpart 1
+cat("Rpart 1")
+set.seed(12345) # need to set same seed for all training to have same fold separation?
+fitRpart1 <- train(Happiness ~ ., data = dtrain,
+                   method = "rpart",
+                   trControl = fitControl
+)
+
+# train 2: basic rpart2
+cat("Rpart 2")
+set.seed(12345) # need to set same seed for all training to have same fold separation?
+fitRpart2 <- train(Happiness ~ ., data = dtrain,
+                   method = "rpart2",
+                   trControl = fitControl
+)
+
+resampsWv6 <- resamples(list(rpart1 = fitRpart1,
+                             rpart2 = fitRpart2)
+                        
