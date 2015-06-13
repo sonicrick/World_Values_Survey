@@ -9,4 +9,4 @@ sourcefile <- "WV6.RData"
 codebook <- "WV6_Codebook_v_2014_11_07.csv"
 fieldinfo <- "WVS_6_valuerange.csv"
 mainvar <- "WV6"
-wvs6df <- load.WVS.long.happy(sourcefile, codebook, fieldinfo, mainvar)
+wvs6df <- load.WVS(sourcefile, codebook, fieldinfo, mainvar)
