@@ -9,7 +9,9 @@ sourcefile <- "WV6.RData"
 codebook <- "WV6_Codebook_v_2014_11_07.csv"
 fieldinfo <- "WVS_6_valuerange.csv"
 mainvar <- "WV6"
-d <- load.WVS(sourcefile, codebook, fieldinfo, mainvar)
+happinessfield="V10"
+countryfield="V2"
+d <- load.WVS(sourcefile, codebook, fieldinfo, mainvar, happinessfield, countryfield)
 
 # split training and test set
 set.seed(13579)
@@ -18,6 +20,12 @@ dtrain <- d[trainIndex, ]
 dtest <- d[-trainIndex, ]
 
 # train setting: set in WVS_lib.R
+
+##############
+# enable parallel processing
+##############
+require(doSNOW)
+cl <- registerDoSNOW(makeCluster(4, type = "SOCK"))
 
 # train 1: basic rpart 1
 cat("Rpart 1")
@@ -36,5 +44,9 @@ fitRpart2 <- train(Happiness ~ ., data = dtrain,
 )
 
 resampsWv6 <- resamples(list(rpart1 = fitRpart1,
-                             rpart2 = fitRpart2)
-                        
+                             rpart2 = fitRpart2))
+
+#######################
+# stop parallel processing
+#######################
+stopCluster(cl)         

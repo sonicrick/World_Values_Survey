@@ -18,6 +18,46 @@ fitControl <- trainControl(## 5-fold CV
   repeats = 5)
 
 ################
+# create full map of variable name from each wave to the integrated one
+################
+map.Long.to.Wave <- function() {
+  require(readxl)
+  
+  integratedDictionary <- "WVS_Values Surveys Integrated Dictionary_TimeSeries_v_2014-04-25.xls"
+  iDict <- read_excel(file.path(datapath, integratedDictionary),
+                      skip=3)
+  # rename the fields to be meaningful
+  WVfield <- 4:9  # based on current field format
+  names(iDict)[WVfield] <- paste0("WV", 1:length(WVfield))
+  # take first string before space in each as the variable name
+  for (i in WVfield) {
+    iDict[, i] <- sapply(strsplit(iDict[, i], " "), function(x) x[1])
+  }
+  
+  return(iDict)
+}
+
+################
+# create full map of variable name from each wave to the integrated one
+################
+map.Wave <- function(selectwave) {
+  # get full mapping table
+  waveTable <- map.Long.to.Wave()
+  
+  #identify column for appropriate wave
+  waveCol <- grep(paste0("WV", selectwave), names(waveTable))
+
+  # remove rows with empty value for this wave
+  waveTable <- waveTable[waveTable[, waveCol] !="", ]
+    
+  # remove other waves
+  waveRemove <- grep("WV", names(waveTable))
+  waveTable <- waveTable[, -waveRemove[waveRemove != waveCol]]
+  
+  return(waveTable)
+}
+
+################
 # identify option numbers in the value range of a field
 ################
 extract.field.numbers <- function(valuerange) {
@@ -35,7 +75,7 @@ is.categorical <- function(valuerange) {
   is.cat <- max(extract.field.numbers(valuerange)) > 0
   
   #exception: some has no numbers and say "
-  exc.phrases <- c("(*) See annexe")
+  exc.phrases <- c("(*) See annexe", "CS Codes")
   if (valuerange %in% exc.phrases) is.cat=TRUE
   
   return(is.cat)
@@ -45,7 +85,14 @@ is.categorical <- function(valuerange) {
 # load longitudinal data for WVS filtered for Finland and Singapore
 # set up for Happiness as dependent variable
 ################
-load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar) {
+load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar,
+                     happinessfield, countryfield, 
+                     nafield="") {
+  # na fields are fields with NA value, default none
+  # negfield above are for fields with meaningful value range in the negative
+  # e.g. is -2 to 2 where -2 is strongly disagree and 2 is strongly agree
+  # excluding fields where negative is used to indicate absence of data
+  
   load(file.path(datapath, sourcefile))
   fields <- read.csv(file.path(datapath, codebook),
                      stringsAsFactors=FALSE)
@@ -67,34 +114,46 @@ load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar) {
   Bin <- Bin[, !(names(Bin) %in% fieldsRange$VARIABLE[fieldsRange$IGNORE=="Y"])]
   fieldsRange <- fieldsRange[fieldsRange$IGNORE!="Y", ]  #shorten list of names after eliminating IGNORED
   
-  #special treatment for Y003 which has NAs: categorise to -5 (i.e. unknown) before converting to factor
-  Bin$Y003[is.na(Bin$Y003)] <- -5
-  
+  #special treatment for fields which are known to have NAs:
+  # categorise to -5 (i.e. unknown) before converting to factor
+  # TODO: automate discovery of NAs rather than specified
+  naloop <- which(names(Bin) %in% nafield)
+  for (i in naloop) {
+    Bin[is.na(Bin[, i]), i] <- -5  
+  }
+
   #change to factor those which are factorsWV6_Codebook_v_2014_11_07WV6_Codebook_v_2014_11_07
   is.cat <- sapply(fieldsRange$VALUE_RANGE, is.categorical, USE.NAMES=FALSE)
   idx <- which(names(Bin) %in% fieldsRange$VARIABLE[is.cat])
   for (i in idx) Bin[, i] <- as.factor(Bin[, i])
+
+  # rename for convenience
+  names(Bin)[names(Bin)==happinessfield] <- "Happiness"
+  names(Bin)[names(Bin)==countryfield] <- "Country"
   
   # set readable level for key fields
-  levels(Bin$S003) <- c("Finland", "Singapore")
-  levels(Bin$A008) <- c("No answer", "Don't know", "Very happy", "Quite happy", "Not very happy", "Not at all happy")
-  
+  levels(Bin$Country) <- c("Finland", "Singapore")
+  happinessSurveyLegend <- as.character(c(-5:-1, 1:4))
+  happinessSurveyLabels <- c("Inappropriate response", "Not asked in survey", 
+                             "Not applicable", "No answer", "Don't know", "Very happy",
+                             "Quite happy", "Not very happy", "Not at all happy")
+  Bin$Happiness <- factor(Bin$Happiness, levels=happinessSurveyLegend,
+                          labels=happinessSurveyLabels)
+
   # filter out those without data on Happiness
-  Bin <- Bin[!(Bin$A008 %in% c("No answer", "Don't know")), ]  # eliminate those with unknown/missing answer etc on happiness
+  # Bin <- Bin[!(Bin$Happiness %in% c("No answer", "Don't know")), ]  # eliminate those with unknown/missing answer etc on happiness
+  Bin <- Bin[as.numeric(Bin$Happiness) > 0, ]  # eliminate those with unknown/missing answer etc on happiness
   #refactor to eliminate non-existent label
-  Bin$A008 <- factor(Bin$A008)
+  Bin$Happiness <- factor(Bin$Happiness)
   
   # check how many different values are in the field
   # dropping fields which only have one value (useless for prediction and throws error)
   responses <- apply(Bin, 2, function(x) length(table(x)))
   Bin <- Bin[ , -which(responses==1)]
-  
-  # rename for convenience
-  names(Bin)[names(Bin)=="A008"] <- "Happiness"
-  names(Bin)[names(Bin)=="S003"] <- "Country"
-  
+
   return(Bin)
 }
+
 
 ############
 # convenience function to load longitudinal happiness data
@@ -103,7 +162,10 @@ load.WVS.long.happy <- function() {
   load.WVS(sourcefile="WV_long.RData",
            codebook="filtered WVS_Values Surveys Integrated Dictionary_TimeSeries_v_2014-04-25.csv",
            fieldinfo="WVS_L_filtered_valuerange.csv",
-           mainvar="WVL")
+           mainvar="WVL",
+           happinessfield="A008",
+           countryfield="S003",
+           nafield=c("Y003"))
 }
 
 ################
