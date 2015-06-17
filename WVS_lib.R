@@ -177,3 +177,34 @@ separate.country <- function(wvsdata, country) {
   sepdata <- sepdata[, !(names(sepdata) %in% country.fields)]
   return(sepdata)
 }
+
+################
+# merge non-answers (e.g. negative values indicating Not Applicable, Don't Know, etc)
+# into one level
+################
+merge.nonanswers <- function(wvsdata) {
+  # hard coded exception at the moment to exclude:
+  # Y003 the only one where negative is not a non-answer
+  # Country and Happiness, which has text levels
+  exclude <- c("Happiness", "Country", "Y003")
+  
+  ## also non-factors
+  nonfactors <- which(sapply(wvsdata, class)!="factor")
+  exclude <- c(exclude, names(wvsdata)[nonfactors])
+  
+  #note that even numerics (e.g. age) have some illogical negative number
+  #handling of that left outside this merging
+  idx <- which(!(names(wvsdata) %in% exclude))
+  
+  temp <- wvsdata[, idx]
+  #convert back to numeric first
+  temp <- lapply(temp, function(x) as.numeric(as.character(x)))
+  #standardise all non-positive to 0
+  temp <- lapply(temp, function(x) { x[x < 1] <- 0; x})
+  #convert back to factor
+  temp <- lapply(temp, factor)
+  
+  wvsdata[, idx] <- temp
+  
+  return(wvsdata)
+}

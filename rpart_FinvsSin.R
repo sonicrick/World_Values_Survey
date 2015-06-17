@@ -90,7 +90,7 @@ resamps <- resamples(list(rpartFin=rpartFin,
                           rpart2Sin=rpart2Sin))
 
 # based on resamps result, rpartFin2 and rpartSin2 are better
-#save(resamps, rpart2Fin, rpart2Sin, file=file.path(datapath, "FinvsSin.Rdata"))
+save(resamps, rpart2Fin, rpart2Sin, file=file.path(datapath, "FinvsSin.Rdata"))
 
 prp(rpart2Fin$finalModel)
 
