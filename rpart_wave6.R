@@ -5,22 +5,7 @@
 source('~/GitHub/World_Values_Survey/WVS_lib.R')
 
 #load data
-sourcefile <- "WV6.RData"
-codebook <- "WV6_Codebook_v_2014_11_07.csv"
-fieldinfo <- "WVS_6_valuerange.csv"
-mainvar <- "WV6"
-happinessfield="V10"
-countryfield="V2"
-d <- load.WVS(sourcefile, codebook, fieldinfo, mainvar, happinessfield, countryfield)
-dnon <- merge.nonanswers(d)
-
-# split training and test set
-set.seed(13579)
-trainIndex <- createDataPartition(d$Happiness, p=.8, list=FALSE)
-dtrain <- d[trainIndex, ]
-dtest <- d[-trainIndex, ]
-dnontrain <- dnon[trainIndex, ]
-dnontest <- dnon[-trainIndex, ]
+source('~/GitHub/World_Values_Survey/load_WV6_for_caret.R')
 
 # train setting: set in WVS_lib.R
 tuneLength <- 10
@@ -81,7 +66,7 @@ resampsWV6 <- resamples(list(rpart1 = fitRpart1,
                              rpart1cleannonanswer = fitRpart4,
                              rpart2cleannonanswer = fitRpart5))
 
-save(resampsWV6, file=file.path(datapath, "rparttrain_WV6.Rdata"))
+# save(resampsWV6, fitRpart2, fitRpart5, file=file.path(datapath, "rparttrain_WV6.Rdata"))
 
 #######################
 # stop parallel processing

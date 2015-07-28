@@ -13,8 +13,14 @@ registerDoSNOW(cl)
 #train
 set.seed(12345)
 ptm <- proc.time()
-# system.time(firstSet <- train(Happiness ~ ., data = trainFin1,
-#                               method = "rpart2", trControl = fitControl))
+firstSet <- train(Happiness ~ ., data = trainFin1,
+                  method = "rpart2", trControl = fitControl)
+time0 <- proc.time()-ptm
+cat(time0)
+
+
+set.seed(12345)
+ptm <- proc.time()
 firstSet <- train(x=trainFin1[, names(trainFin1) != "Happiness"],
                   y = trainFin1$Happiness,
                   method = "rpart2", trControl = fitControl)

@@ -82,7 +82,7 @@ is.categorical <- function(valuerange) {
 }
 
 ################
-# load longitudinal data for WVS filtered for Finland and Singapore
+# load data for WVS filtered for Finland and Singapore (longitudinal or wave)
 # set up for Happiness as dependent variable
 ################
 load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar,
@@ -137,12 +137,13 @@ load.WVS <- function(sourcefile, codebook, fieldinfo, mainvar,
   happinessSurveyLabels <- c("Inappropriate response", "Not asked in survey", 
                              "Not applicable", "No answer", "Don't know", "Very happy",
                              "Quite happy", "Not very happy", "Not at all happy")
+  meaningful <- c("Very happy", "Quite happy", "Not very happy", "Not at all happy")
   Bin$Happiness <- factor(Bin$Happiness, levels=happinessSurveyLegend,
                           labels=happinessSurveyLabels)
 
   # filter out those without data on Happiness
-  # Bin <- Bin[!(Bin$Happiness %in% c("No answer", "Don't know")), ]  # eliminate those with unknown/missing answer etc on happiness
-  Bin <- Bin[as.numeric(Bin$Happiness) > 0, ]  # eliminate those with unknown/missing answer etc on happiness
+  # Bin <- Bin[as.numeric(Bin$Happiness) > 0, ]  # eliminate those with unknown/missing answer etc on happiness
+  Bin <- Bin[Bin$Happiness %in% meaningful, ]  # eliminate those with unknown/missing answer etc on happiness
   #refactor to eliminate non-existent label
   Bin$Happiness <- factor(Bin$Happiness)
   
@@ -207,4 +208,24 @@ merge.nonanswers <- function(wvsdata) {
   wvsdata[, idx] <- temp
   
   return(wvsdata)
+}
+
+
+################
+# calculate accuracy against a test data set for a fit model from caret
+# for a particular targetfueld
+# when changing targetfield, remember to feed testfile with same field as what is trained for fitmodel
+# (is usually omitting other target fields, e.g when targetfield is "Unhappiness", testfile may have [, <exclude "Happiness"])
+################
+
+accuracy_chk <- function(fitmodel, testfile, targetfield) {
+  pred <- predict(fitmodel, testfile)
+  chkdf <- data.frame(predicted=pred, actual=testfile[[targetfield]])
+  crosstab <- with(chkdf, table(predicted, actual))
+  chksum <- chkdf %>% group_by(predicted, actual) %>% summarize(count=n())
+  accur <- with(chksum, sum(count[predicted==actual]))/nrow(testfile)
+  return(list(chkdf=chkdf,
+              crosstab=crosstab,
+              chksum=chksum,
+              accur=accur))
 }
