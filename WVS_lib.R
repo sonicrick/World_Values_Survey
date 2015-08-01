@@ -11,11 +11,56 @@ require(caret)
 # set standard caret training setting across all experiment
 ################
 # train setting
-fitControl <- trainControl(## 5-fold CV
+tuneLength <- 5
+CVfolds <- 5
+CVreps <- 5
+
+# create manual seeds vector for parallel processing repeatibility
+seedNum <- CVfolds * CVreps + 1
+seedLen <- (CVfolds + tuneLength)  #supposed to be the number of models evaluated: maybe number of folds + tunelength?
+set.seed(321)
+seeds <- vector(mode = "list", length = seedNum)
+for(i in 1:(seedNum-1)) seeds[[i]] <- sample.int(1000, seedLen)  
+## For the last model:
+seeds[[seedNum]] <- sample.int(1000, 1)
+
+#basic control
+fitControl <- trainControl(
   method = "repeatedcv",
-  number = 5,
-  ## repeated five times
-  repeats = 5)
+  number = CVfolds,
+  repeats = CVreps,
+  seeds=seeds
+  )
+
+# train control for Binary classifier, necessary when optimizing sensitivity and specificity
+fitTwoClass <- trainControl(
+  method = "repeatedcv",
+  number = CVfolds,
+  repeats = CVreps,
+  classProbs=TRUE,
+  summaryFunction = twoClassSummary,
+  seeds = seeds
+)
+
+# convenience function to create new fitTwoClass given different seeds; to try find a seed that doesn't cause error
+createFTC <- function (startseed) {
+  seedNum <- CVfolds * CVreps + 1
+  seedLen <- (CVfolds + tuneLength)  #supposed to be the number of models evaluated: maybe number of folds + tunelength?
+  set.seed(startseed)
+  seeds <- vector(mode = "list", length = seedNum)
+  for(i in 1:(seedNum-1)) seeds[[i]] <- sample.int(1000, seedLen)  
+  ## For the last model:
+  seeds[[seedNum]] <- sample.int(1000, 1)
+  FTC <- trainControl(
+    method = "repeatedcv",
+    number = CVfolds,
+    repeats = CVreps,
+    classProbs=TRUE,
+    summaryFunction = twoClassSummary,
+    seeds = seeds
+  )
+  return(FTC)
+}
 
 ################
 # create full map of variable name from each wave to the integrated one
@@ -228,4 +273,26 @@ accuracy_chk <- function(fitmodel, testfile, targetfield) {
               crosstab=crosstab,
               chksum=chksum,
               accur=accur))
+}
+
+
+################
+# convenience function for training unhappiness
+# default to training by accuracy and numeric data only
+################
+
+trainUnhappiness <- function(tmethod, tdata=dnumTrain, control=fitControl, tmetric="Accuracy", display=tmethod) {
+  cat(paste0(display, "\n"))
+  set.seed(12345) # need to set same seed for all training to have same fold separation?
+  ptm <- proc.time()
+  fitModel <- train(
+    Unhappiness ~ ., data = tdata,
+    method = tmethod,
+    trControl = control,
+    tuneLength = tuneLength,
+    metric=tmetric
+  )
+  time1 <- proc.time()-ptm
+  cat(time1)
+  return(fitModel)
 }
