@@ -64,31 +64,51 @@ models <- c(
   # tried and eliminated because performance not better than C5.0,
   # and results cannot be saved in RData (it links to environment)
   # "J48", "LMT",
-  "nb", "svmLinear", "ctree", "rpart", "ada", "C5.0"
+  # "nb", "svmLinear",
+  "ctree", "rpart", "ada", "C5.0"
 )
 
-# train 1: optimize by Accuracy (default)
-listUnhAccCat <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dcatTrain, control=fitControl))
+
+# train 3: by sensitivity
+# NOTE: from past runs, observed that only a few methods have different outcome optimizing for sensitivity vs for ROC
+listTwoClassSensCat <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dcatTrain, control=fitTwoClass, tmetric="Sens" ))
+
+names(listTwoClassSensCat) <- models
+resampsNumSensUnhCat <- resamples(listTwoClassSensCat)
+
+save(resampsNumSensUnhCat,
+     listTwoClassSensCat,
+     file=file.path(datapath, "categoric_unhappiness_Sens.Rdata")
+)
+
 
 # train 2: by ROC
 require(pROC)
 listTwoClassCat <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dcatTrain, control=fitTwoClass, tmetric="ROC" ))
 # tst <- trainUnhappiness(tmethod="rocc", control=fitTwoClass, tmetric="ROC")
 
-# train 3: by sensitivity
-# NOTE: from past runs, observed that only a few methods have different outcome optimizing for sensitivity vs for ROC
-listTwoClassSensCat <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dcatTrain, control=fitTwoClass, tmetric="Sens" ))
-
-
-#consolidating and saving
-names(listUnhAccCat) <- models
-resampsNumUnhCat <- resamples(listUnhAccCat)
-
 names(listTwoClassCat) <- models
 resampsNumROCUnhCat <- resamples(listTwoClassCat)
 
-names(listTwoClassSensCat) <- models
-resampsNumSensUnhCat <- resamples(listTwoClassSensCat)
+save(resampsNumROCUnhCat,
+     listTwoClassCat,
+     file=file.path(datapath, "categoric_unhappiness_ROC.Rdata")
+)
+
+
+
+# train 1: optimize by Accuracy (default)
+listUnhAccCat <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dcatTrain, control=fitControl))
+
+names(listUnhAccCat) <- models
+resampsNumUnhCat <- resamples(listUnhAccCat)
+
+save(resampsNumUnhCat,
+     listUnhAccCat,
+     file=file.path(datapath, "categoric_unhappiness.Rdata")
+)
+
+#calculate own accuracy
 
 accListCat <- lapply(listUnhAccCat, accuracy_chk, dcatTest, "Unhappiness")
 allAccurCat <- sapply(accListCat, function(x) x$accur)
@@ -112,20 +132,11 @@ names(shortlist) <- shortlist_model
 names(shortlist_sens) <- shortlist_model
 # shortlist <- ROCList[[shortlist_model]]$crosstab
 
-save(resampsNumUnhCat,
-     listUnhAccCat,
-     file=file.path(datapath, "categoric_unhappiness.Rdata")
-)
 
-save(resampsNumROCUnhCat,
-     listTwoClassCat,
-     file=file.path(datapath, "categoric_unhappiness_ROC.Rdata")
-)
 
-save(resampsNumSensUnhCat,
-     listTwoClassSensCat,
-     file=file.path(datapath, "categoric_unhappiness_Sens.Rdata")
-)
+
+
+
 
 
 #######################

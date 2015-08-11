@@ -22,16 +22,19 @@ dnon$Unhappiness <- "Y"
 dnon[which(d$Happiness %in% c("Very happy", "Quite happy")), ]$Unhappiness <- "N"
 dnon$Unhappiness <- relevel(factor(dnon$Unhappiness), ref="Y")  # caret needs this as factor to train
 dnon$Happiness <- NULL  # eliminate the field to avoid confusion
-# wt <- table(dnon$Unhappiness)/nrow(dnon)  # parameter for class weightage in training below
-# 
-# # read field descriptions in codebook
-# fieldsRange <- read.csv(file.path(datapath, "WVS_6_valuerange.csv"),
-#                         stringsAsFactors=FALSE)
-# #keep only fields in dataset
-# fieldsRange <- fieldsRange[fieldsRange$VARIABLE %in% names(dnon), ]
-# numScale <- fieldsRange$VARIABLE[fieldsRange$NonStandard!="Y"]
-# 
-# # split into numeric and non-numeric
+wt <- table(dnon$Unhappiness)/nrow(dnon)  # parameter for class weightage in training below
+
+# read field descriptions in codebook
+fieldsRange <- read.csv(file.path(datapath, "WVS_6_valuerange.csv"),
+                        stringsAsFactors=FALSE)
+#keep only fields in dataset
+fieldsRange <- fieldsRange[fieldsRange$VARIABLE %in% names(dnon), ]
+numScale <- fieldsRange$VARIABLE[fieldsRange$NonStandard!="Y"]
+
+# convert numeric field in-situ
+dmixnum <- dnon
+mixnumIdx <-  which(names(dnon) %in% numScale)
+dmixnum[, mixnumIdx] <- lapply(dnon[, mixnumIdx], function(x) as.numeric(as.character(x)))
 # dnum <- as.data.frame(sapply(dnon[, (names(dnon) %in% numScale)], as.numeric))
 # dcat <- dnon[, !((names(dnon) %in% numScale))]
 # 
@@ -47,9 +50,9 @@ dnontrain <- dnon[trainIndex, ]
 dnontrain <- upSample(dnontrain, dnontrain$Unhappiness, list=T)[[1]]
 dnontest <- dnon[-trainIndex, ]
 
-# dnumTrain <- dnum[trainIndex, ]
-# dnumTrain <- upSample(dnumTrain, dnumTrain$Unhappiness, list=T)[[1]]
-# dnumTest <- dnum[-trainIndex, ]
+dmixnumTrain <- dmixnum[trainIndex, ]
+dmixnumTrain <- upSample(dmixnumTrain, dmixnumTrain$Unhappiness, list=T)[[1]]
+dmixnumTest <- dmixnum[-trainIndex, ]
 
 
 ##############
@@ -65,32 +68,59 @@ models <- c(
   # tried and eliminated because performance not better than C5.0,
   # and results cannot be saved in RData (it links to environment)
   # ,
-  "rf", "xgbTree"
+  "xgbTree", "rf"
 )
 
 # train 1: optimize by Accuracy (default)
 listAllUnhAcc <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dnontrain))
 
-# train 2: by ROC
-require(pROC)
-listAllTwoClass <- lapply(models, function(x)
-  trainUnhappiness(tmethod=x, tdata=dnontrain, control=fitTwoClass, tmetric="ROC" ))
-
-# train 3: by sensitivity
-# NOTE: from past runs, observed that only a few methods have different outcome optimizing for sensitivity vs for ROC
-listAllTwoClassSens <- lapply(models, function(x)
-  trainUnhappiness(tmethod=x, tdata=dnontrain, control=fitTwoClass, tmetric="Sens" ))
-# tst <- trainUnhappiness(tmethod="rocc", control=fitTwoClass, tmetric="ROC")
-
-#consolidating and saving
 names(listAllUnhAcc) <- models
 resampsAllUnh <- resamples(listAllUnhAcc)
 
-names(listTwoClass) <- models
-resampsAllROCUnh <- resamples(listAllTwoClass)
+save(resampsAllUnh,
+     listAllUnhAcc,
+     file=file.path(datapath, "all_unhappiness.Rdata")
+)
 
-names(listTwoClassSens) <- models
-resampsAllSensUnh <- resamples(listAllTwoClassSens)
+# train 2: optimize by Accuracy for fields mixed(numeric and factor)
+listAllMixAcc <- lapply(models, function(x) trainUnhappiness(tmethod=x, tdata=dmixnumTrain))
+
+names(listAllMixAcc) <- models
+resampsAllMix <- resamples(listAllMixAcc)
+
+save(resampsAllMix,
+     listAllMixAcc,
+     file=file.path(datapath, "all_mix_unhappiness.Rdata")
+)
+
+# # train 2: by ROC
+# require(pROC)
+# listAllTwoClass <- lapply(models, function(x)
+#   trainUnhappiness(tmethod=x, tdata=dnontrain, control=fitTwoClass, tmetric="ROC" ))
+# 
+# names(lisAlltTwoClass) <- models
+# resampsAllROCUnh <- resamples(listAllTwoClass)
+# 
+# save(resampsAllROCUnh,
+#      listAllTwoClass,
+#      file=file.path(datapath, "all_unhappiness_ROC.Rdata")
+# )
+# 
+# # train 3: by sensitivity
+# # NOTE: from past runs, observed that only a few methods have different outcome optimizing for sensitivity vs for ROC
+# listAllTwoClassSens <- lapply(models, function(x)
+#   trainUnhappiness(tmethod=x, tdata=dnontrain, control=fitTwoClass, tmetric="Sens" ))
+# # tst <- trainUnhappiness(tmethod="rocc", control=fitTwoClass, tmetric="ROC")
+# 
+# names(listTwoClassSens) <- models
+# resampsAllSensUnh <- resamples(listAllTwoClassSens)
+# 
+# save(resampsAllSensUnh,
+#      listAllTwoClassSens,
+#      file=file.path(datapath, "all_unhappiness_Sens.Rdata")
+# )
+
+
 
 accListAll <- lapply(listAllUnhAcc, accuracy_chk, dnontest, "Unhappiness")
 allAccurAll <- sapply(accListAll, function(x) x$accur)
@@ -99,6 +129,14 @@ unhRecallAll <- sapply(accListAll, function(x) x$crosstab[1,1]/sum(x$crosstab[,1
 
 #display
 allAccurAll;unhAccurAll;unhRecallAll
+
+accListAllMix <- lapply(listAllMixAcc, accuracy_chk, dmixnumTest, "Unhappiness")
+allAccurAllMix <- sapply(accListAllMix, function(x) x$accur)
+unhAccurAllMix <- sapply(accListAllMix, function(x) x$crosstab[1,1]/sum(x$crosstab[1,]))
+unhRecallAllMix <- sapply(accListAllMix, function(x) x$crosstab[1,1]/sum(x$crosstab[,1]))
+
+#display
+allAccurAllMix;unhAccurAllMix;unhRecallAllMix
 
 # ROCListAll <- lapply(listAllTwoClass, accuracy_chk, dnontest, "Unhappiness")
 # allROCAccurAll <- sapply(ROCListAll, function(x) x$accur)
@@ -117,20 +155,8 @@ names(shortlist) <- shortlist_model
 # shortlist <- ROCList[[shortlist_model]]$crosstab
 
 #save all
-save(resampsAllUnh,
-     listAllUnhAcc,
-     file=file.path(datapath, "all_unhappiness.Rdata")
-)
 
-# save(resampsAllROCUnh,
-#      listAllTwoClass,
-#      file=file.path(datapath, "all_unhappiness_ROC.Rdata")
-# )
-# 
-# save(resampsAllSensUnh,
-#      listAllTwoClassSens,
-#      file=file.path(datapath, "all_unhappiness_Sens.Rdata")
-# )
+
 
 
 #######################

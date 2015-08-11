@@ -4,6 +4,7 @@
 
 setwd("~/GitHub/World_Values_Survey")
 datapath <- "~/GitHub/World_Values_Survey/data"
+chartpath <- "~/GitHub/World_Values_Survey/chart"
 
 require(caret)
 
